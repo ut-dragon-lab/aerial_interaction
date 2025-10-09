@@ -54,15 +54,15 @@
   </node>
 
   <!-- mocap -->
-  <node pkg="mocap_optitrack" type="mocap_node" name="mocap_node" respawn="false" if="sim">
+  <node pkg="mocap_optitrack" type="mocap_node" name="mocap_node" respawn="false" if="$(arg sim)">
     <rosparam subst_value="true">
       rigid_bodies:
-         '1':
+         '2':
                pose: /wrist/mocap/pose
                pose2d: /wrist/mocap/ground_pose
                child_frame_id: baselink
                parent_frame_id: world
-         '2':
+         '3':
                pose: /eye/mocap/pose
                pose2d: /eye/mocap/ground_pose
                child_frame_id: baselink
