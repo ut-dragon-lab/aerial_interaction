@@ -128,6 +128,18 @@
   ########## Simple Demo #########
   <node pkg="dragon" type="simple_demo.py" name="simple_demo" ns="$(arg robot_ns)" output="screen" if="$(arg demo)"/>
 
+  <group ns="snake_head" if = "$(eval not arg('rm') and arg('sim'))">
+    <include file="$(find spinal)/launch/bridge.launch">
+      <arg name="mode" value="serial" />
+      <arg name="serial_port" value="/dev/snake_head" />
+      <arg name="serial_baud" value="921600" />
+    </include>
+
+    <node pkg="snake" type="snake_autograsping.py" name="snake_autograsping"  output="screen"  />
+
+  </group>
+
+
 </launch>
 
 
