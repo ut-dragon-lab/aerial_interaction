@@ -16,7 +16,7 @@
   <arg name="robot_spawn_yaw" default="0.0"/>
 
   <!-- 追加：手の位置のソース(marker or mocap) -->
-  <arg name="hand_source" default="mocap"/> 
+  <arg name="hand_source" default="marker"/> 
 
   <!-- 追加：Gazeboからmocap疑似生成を使うかどうか -->
   <arg name="use_gazebo_mocap" default="False"/>  
@@ -69,29 +69,6 @@
   <!-- convert gazebo world to mocap data-->
   <!-- 変更：simのとき常にではなく、use_gazebo_mocapがTrueのときだけ -->
   <node name="gazebo_state_converter" pkg="aerial_handover" type="gazebo_state_converter.py" respawn="false" output="screen" if="$(arg use_gazebo_mocap)"/>
-
-
-  <!-- mocap -->
-  <!-- 変更：hand_source == 'mocap'のときだけ起動（sim/実機どちらでも） -->
-  <node pkg="mocap_optitrack" type="mocap_node" name="mocap_node" respawn="false" if="$(eval arg('hand_source') == 'mocap')">
-    <rosparam subst_value="true">
-      rigid_bodies:
-         '2':
-               pose: /hand_pose
-               pose2d: /wrist/mocap/ground_pose
-               child_frame_id: baselink
-               parent_frame_id: world
-         '3':
-               pose: /eye/mocap/pose
-               pose2d: /eye/mocap/ground_pose
-               child_frame_id: baselink
-               parent_frame_id: world
-      optitrack_config:
-         multicast_address: 239.255.42.99
-         command_port: 1510
-         data_port: 1511
-    </rosparam>
-  </node>
 
   <node pkg="aerial_handover" type="interactive_marker.py" name="interactive_marker" output="screen" if="$(eval arg('hand_source') == 'marker')">
     <param name="frame_id" value="world" />
