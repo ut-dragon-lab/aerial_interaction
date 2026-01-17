@@ -37,9 +37,9 @@ class AutoGrasping:
 
         # ROS I/O
         self.last_callback_time = rospy.get_time()
-        self.sub = rospy.Subscriber('/servo/states', ServoStates, self.callback, queue_size=10)
-        self.pub = rospy.Publisher('/servo/target_states', ServoControlCmd, queue_size=10)
-        self.torque_pub = rospy.Publisher('/servo/torque_enable', ServoTorqueCmd, queue_size=10)
+        self.sub = rospy.Subscriber('/snake_head/servo/states', ServoStates, self.callback, queue_size=10)
+        self.pub = rospy.Publisher('/snake_head/servo/target_states', ServoControlCmd, queue_size=10)
+        self.torque_pub = rospy.Publisher('/snake_head/servo/torque_enable', ServoTorqueCmd, queue_size=10)
         self.rate = rospy.Rate(40)
         self.command_topic = rospy.get_param('~command_topic', '/autograsping/command')
         self.command_sub = rospy.Subscriber(self.command_topic, String, self.command_callback, queue_size=10)
