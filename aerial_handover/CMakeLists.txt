@@ -24,6 +24,7 @@ catkin_install_python(PROGRAMS
   scripts/interactive_marker.py
   scripts/pose_transformer.py
   scripts/dragon_handover_nav.py
+  scripts/dragon_root_pose_publisher.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
