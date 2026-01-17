@@ -8,9 +8,6 @@
     <arg name="headless" default="False" />
     <!-- 手の位置のソース：marker or mocap -->
     <arg name="hand_source" default="marker" />
-    <!-- safe distance from human center to the robot's root link (meters) -->
-    <arg name="safe_distance" default="0.8" />
-    <arg name="num_arc_waypoints" default="10" />
     <!-- =====================================
        DRAGON + Gazebo + 目・手モデル (task)
        ===================================== -->
@@ -21,16 +18,6 @@
         <arg name="hand_source" value="$(arg hand_source)" />
     </include>
 
-    <node pkg="aerial_handover" type="pose_transformer.py" name="pose_transformer" output="screen">
-        <param name="handover_dis_x" value="0.4" />
-        <param name="handover_dis_z" value="0.1" />
-        <param name="handover_pitch" value="0.0" />
-        <remap from="/desired_3D_pose" to="/hand_pose" />
-    </node>
-
-    <node pkg="aerial_handover" type="dragon_handover_nav.py" name="dragon_handover_nav" output="screen">
-        <rosparam command="load" file="$(find aerial_handover)/config/dragon_handover_nav_params.yaml" />
-    </node>
+    <include if="$(arg sim)" file="$(find aerial_handover)/launch/handover_nav.launch" />
 
 </launch>
-<!-- rosrun gazebo_ros_link_attacher link_attacher_node -->
