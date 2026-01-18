@@ -18,6 +18,8 @@
         <arg name="hand_source" value="$(arg hand_source)" />
     </include>
 
-    <include if="$(arg sim)" file="$(find aerial_handover)/launch/handover_nav.launch" />
+    <include if="$(arg sim)" file="$(find aerial_handover)/launch/handover_nav.launch">
+        <arg name="hand_source" value="$(arg hand_source)" />
+    </include>
 
 </launch>

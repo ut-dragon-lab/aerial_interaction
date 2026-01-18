@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Arguments for distance-based grasping node -->
+  <arg name="open_threshold" default="0.4" />
+  <arg name="close_threshold" default="0.6" />
+  
+  <!-- Launch distance-based grasping node -->
+  <node pkg="snake" type="distance_based_grasping.py" name="distance_based_grasping" output="screen">
+    <param name="open_threshold" value="$(arg open_threshold)" />
+    <param name="close_threshold" value="$(arg close_threshold)" />
+  </node>
+  
+  <!-- Launch snake autograsping rm node -->
+  <node pkg="snake" type="snake_autograsping_rm.py" name="snake_autograsping_rm" output="screen" />
+  
+</launch>
