@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sdf version="1.6">
+  <model name="rectangular">
+    <static>true</static>
+    <pose>1 1 1 0 0 0</pose>
+    <link name="box_link">
+      <inertial>
+        <inertia>
+	  <mass>0.01</mass>
+          <ixx>0.00001</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.00001</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.00001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.01 0.15 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.01 0.15 0.15</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <!-- <uri>file://home/iida/ros/jsk_aerial_robot_ws/src/jsk_aerial_robot/robots/beetle/models/sim/doubletag/materials/textures/doubletag.png</uri> -->
+            <uri>file:///home/iida/ros/jsk_aerial_robot_ws/src/jsk_aerial_robot/robots/beetle/models/sim/doubletag/materials/textures</uri>
+          </script>
+        </material>
+	<pose>0.1 0 0 1.5708 0 0</pose>
+      </visual>
+    </link>
+  </model>
+</sdf>

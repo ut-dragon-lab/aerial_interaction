@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot
+    xmlns:xacro="https://www.ros.org/wiki/xacro" name="dragon" >
+
+  <!-- snake head link definition -->
+  <link name="hogehoge">
+    <inertial>
+      <origin xyz="x, y, z"/> <!-- Solidworks no genten kara juushin made no zahyou -->
+      <mass value="hogehoge"/> <!-- simple omosa -->
+      <inertia 
+          ixx="" ixy="" ixz=""
+          iyy="" iyz=""
+          izz=""/>
+    </inertial> <!-- kanseikei -->
+    <visual> <!-- mitame -->
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://snake/urdf/mesh/hogehoge.STL" scale="hoge hoge hoge"/>
+      </geometry>
+    </visual>
+    <collision> <!-- shoutotsu hantei -->
+      <origin xyz="" rpy="0 0 0"/>
+      <geometry>
+        <box size=""/> <!-- tyotto tiisaku -->
+      </geometry>
+    </collision>
+  </link>
+
+</robot>
+

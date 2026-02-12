@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="real_machine" default="true" />
+  <arg name="simulation" default="false" />
+  <arg name="robot_ns" default="object" />
+  <arg name="object_id" default="100" />
+  <arg name="robot_id" default="1" />
+  ## object position in gazebo ##
+  <arg name="object_x" default="3" />
+  <arg name="object_y" default="0" />
+  <arg name="object_z" default="0" />
+  <arg name="object_yaw" default="0" />
+  <group ns="$(arg robot_ns)">
+    <group if="$(arg real_machine)">
+      <group unless="$(arg simulation)">
+        <include file="$(find aerial_robot_base)/launch/external_module/mocap.launch">
+          <arg name="robot_id" value="$(arg object_id)" />
+        </include>
+      </group>
+    </group>
+    <group if="$(arg simulation)">
+      <group unless="$(arg real_machine)">
+        <param name="robot_description"
+          command="$(find xacro)/xacro $(find snake)/urdf/object.urdf no_collision:=false" />
+        <!-- Spawn object directly, ignore if it already exists -->
+        <node pkg="gazebo_ros" type="spawn_model" name="spawn_object" respawn="false" output="screen"
+          args="-urdf -model object -x $(arg object_x) -y $(arg object_y) -z $(arg object_z) -Y $(arg object_yaw) -param robot_description" />
+      </group>
+    </group>
+  </group>
+</launch>

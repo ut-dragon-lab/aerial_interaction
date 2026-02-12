@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sdf version="1.6">
+  <model name="simple_cylinder">
+    <static>false</static>
+    <pose>0.034 0 0 0 0 0</pose>
+    <link name="cylinder_link">
+      <inertial>
+        <inertia>
+	  <mass>0.5</mass>
+          <ixx>0.001494</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.000289</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.001494</izz>
+        </inertia>
+      </inertial>
+    </link>
+  </model>
+</sdf>

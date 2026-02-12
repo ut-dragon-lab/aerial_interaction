@@ -1,0 +1,69 @@
+gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+STM32Hardware.h:196:12:uint32_t STM32Hardware::time()	16	static
+time.h:51:3:ros::Time::Time()	16	static
+msg.h:46:7:constexpr ros::Msg::Msg()	16	static
+Log.h:25:5:rosserial_msgs::Log::Log()	16	static
+Log.h:31:17:virtual int rosserial_msgs::Log::serialize(unsigned char*) const	24	static
+Log.h:44:17:virtual int rosserial_msgs::Log::deserialize(unsigned char*)	32	static
+Log.h:61:26:virtual const char* rosserial_msgs::Log::getType()	16	static
+Log.h:62:26:virtual const char* rosserial_msgs::Log::getMD5()	16	static
+publisher.h:53:7:int ros::Publisher::publish(const ros::Msg*)	16	static
+dynamixel_serial.h:315:7:void ServoData::setGoalPosition(int32_t)	16	static
+dynamixel_serial.h:341:16:unsigned int DynamixelSerial::getServoNum() const	16	static
+dynamixel_serial.h:342:12:uint16_t DynamixelSerial::getTTLRS485Mixed() const	16	static
+dynamixel_serial.h:343:8:void DynamixelSerial::setTTLRS485Mixed(uint16_t)	16	static
+dynamixel_serial.h:344:41:std::array<ServoData, 10>& DynamixelSerial::getServo()	16	static
+dynamixel_serial.h:349:8:void DynamixelSerial::setROSCommFlag(bool)	16	static
+dynamixel_serial.h:350:8:bool DynamixelSerial::getROSCommFlag() const	16	static
+ServoState.h:26:5:spinal::ServoState::ServoState()	16	static
+ServoState.h:35:17:virtual int spinal::ServoState::serialize(unsigned char*) const	32	static
+ServoState.h:63:17:virtual int spinal::ServoState::deserialize(unsigned char*)	32	static
+ServoState.h:93:26:virtual const char* spinal::ServoState::getType()	16	static
+ServoState.h:94:26:virtual const char* spinal::ServoState::getMD5()	16	static
+ServoInfo.h:36:5:spinal::ServoInfo::ServoInfo()	16	static
+ServoInfo.h:50:17:virtual int spinal::ServoInfo::serialize(unsigned char*) const	32	static
+ServoInfo.h:93:17:virtual int spinal::ServoInfo::deserialize(unsigned char*)	32	static
+ServoInfo.h:138:26:virtual const char* spinal::ServoInfo::getType()	16	static
+ServoInfo.h:139:26:virtual const char* spinal::ServoInfo::getMD5()	16	static
+BoardInfo.h:29:5:spinal::BoardInfo::BoardInfo()	16	static
+BoardInfo.h:38:17:virtual int spinal::BoardInfo::serialize(unsigned char*) const	24	static
+BoardInfo.h:61:17:virtual int spinal::BoardInfo::deserialize(unsigned char*)	32	static
+BoardInfo.h:88:26:virtual const char* spinal::BoardInfo::getType()	16	static
+BoardInfo.h:89:26:virtual const char* spinal::BoardInfo::getMD5()	16	static
+servo.cpp:14:6:void DirectServo::init(UART_HandleTypeDef*, ros::NodeHandle*, QueueDefinition**)	48	static
+servo.cpp:53:6:void DirectServo::update()	16	static
+msg.h:46:7:constexpr ros::Msg& ros::Msg::operator=(const ros::Msg&)	16	static
+ServoState.h:12:9:constexpr spinal::ServoState& spinal::ServoState::operator=(const spinal::ServoState&)	16	static
+servo.cpp:59:6:void DirectServo::sendData(bool)	96	static
+servo.cpp:118:6:void DirectServo::torqueEnable(const std::map<unsigned char, float>&)	64	static
+servo.cpp:141:6:void DirectServo::setGoalAngle(const std::map<unsigned char, float>&, uint8_t)	80	static
+servo.cpp:169:6:void DirectServo::servoControlCallback(const spinal::ServoControlCmd&)	40	static
+servo.cpp:189:6:void DirectServo::servoTorqueControlCallback(const spinal::ServoTorqueCmd&)	40	static
+servo.cpp:206:6:void DirectServo::servoConfigCallback(const Request&, spinal::SetDirectServoConfig::Response&)	48	static
+ServoInfo.h:12:9:constexpr spinal::ServoInfo& spinal::ServoInfo::operator=(const spinal::ServoInfo&)	16	static
+BoardInfo.h:13:9:constexpr spinal::BoardInfo& spinal::BoardInfo::operator=(const spinal::BoardInfo&)	16	static
+GetBoardInfo.h:39:9:constexpr spinal::GetBoardInfoResponse& spinal::GetBoardInfoResponse::operator=(const spinal::GetBoardInfoResponse&)	16	static
+servo.cpp:333:6:void DirectServo::boardInfoCallback(const Request&, spinal::GetBoardInfo::Response&)	40	static
+servo.cpp:356:6:void DirectServo::jointProfilesCallback(const spinal::JointProfiles&)	24	static
+msg.h:188:15:static void ros::Msg::varToArr(A, V) [with A = unsigned char*; V = long unsigned int]	24	static
+msg.h:196:15:static void ros::Msg::arrToVar(V&, A) [with V = long unsigned int; A = unsigned char*]	24	static
+node_handle.h:413:8:bool ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::subscribe(ros::Subscriber_&) [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	24	static
+node_handle.h:397:8:bool ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::advertise(ros::Publisher&) [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	24	static
+node_handle.h:429:8:bool ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::advertiseService(ros::ServiceServer<MReq, MRes, ObjT>&) [with MReq = spinal::SetDirectServoConfigRequest; MRes = spinal::SetDirectServoConfigResponse; ObjT = DirectServo; Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	24	static
+node_handle.h:429:8:bool ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::advertiseService(ros::ServiceServer<MReq, MRes, ObjT>&) [with MReq = spinal::GetBoardInfoRequest; MRes = spinal::GetBoardInfoResponse; ObjT = DirectServo; Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	24	static
+node_handle.h:374:8:ros::Time ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::now() [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	24	static
+array:185:7:std::array<_Tp, _Nm>::value_type& std::array<_Tp, _Nm>::operator[](std::array<_Tp, _Nm>::size_type) [with _Tp = ServoData; unsigned int _Nm = 10]	16	static
+stl_map.h:363:7:std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator std::map<_Key, _Tp, _Compare, _Alloc>::begin() const [with _Key = unsigned char; _Tp = float; _Compare = std::less<unsigned char>; _Alloc = std::allocator<std::pair<const unsigned char, float> >]	16	static
+stl_map.h:381:7:std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator std::map<_Key, _Tp, _Compare, _Alloc>::end() const [with _Key = unsigned char; _Tp = float; _Compare = std::less<unsigned char>; _Alloc = std::allocator<std::pair<const unsigned char, float> >]	16	static
+stl_tree.h:398:7:bool std::operator!=(const _Self&, const _Self&)	16	static
+stl_tree.h:364:7:std::_Rb_tree_const_iterator<_Tp>::_Self& std::_Rb_tree_const_iterator<_Tp>::operator++() [with _Tp = std::pair<const unsigned char, float>]	16	static
+stl_tree.h:356:7:const _Tp& std::_Rb_tree_const_iterator<_Tp>::operator*() const [with _Tp = std::pair<const unsigned char, float>]	16	static
+node_handle.h:538:8:void ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::logerror(const char*) [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	16	static
+array:55:7:static constexpr _Tp& std::__array_traits<_Tp, _Nm>::_S_ref(const _Tp (&)[_Nm], std::size_t) [with _Tp = ServoData; unsigned int _Nm = 10]	16	static
+stl_tree.h:1010:7:std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::begin() const [with _Key = unsigned char; _Val = std::pair<const unsigned char, float>; _KeyOfValue = std::_Select1st<std::pair<const unsigned char, float> >; _Compare = std::less<unsigned char>; _Alloc = std::allocator<std::pair<const unsigned char, float> >]	24	static
+stl_tree.h:1018:7:std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::end() const [with _Key = unsigned char; _Val = std::pair<const unsigned char, float>; _KeyOfValue = std::_Select1st<std::pair<const unsigned char, float> >; _Compare = std::less<unsigned char>; _Alloc = std::allocator<std::pair<const unsigned char, float> >]	24	static
+stl_tree.h:238:7:const _Val* std::_Rb_tree_node<_Val>::_M_valptr() const [with _Val = std::pair<const unsigned char, float>]	16	static
+node_handle.h:517:8:void ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::log(char, const char*) [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	40	static
+stl_tree.h:345:7:std::_Rb_tree_const_iterator<_Tp>::_Rb_tree_const_iterator(std::_Rb_tree_const_iterator<_Tp>::_Base_ptr) [with _Tp = std::pair<const unsigned char, float>]	16	static
+aligned_buffer.h:76:7:const _Tp* __gnu_cxx::__aligned_membuf<_Tp>::_M_ptr() const [with _Tp = std::pair<const unsigned char, float>]	16	static
+aligned_buffer.h:68:7:const void* __gnu_cxx::__aligned_membuf<_Tp>::_M_addr() const [with _Tp = std::pair<const unsigned char, float>]	16	static

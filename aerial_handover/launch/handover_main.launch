@@ -1,0 +1,25 @@
+<launch>
+
+    <!-- DRAGON / Gazebo のモード切り替え -->
+    <!-- 今はシミュレーションだけ使うので rm のデフォルトは False にしておく -->
+    <arg name="rm" default="False" />
+    <arg name="sim" default="True" />
+    <!-- Gazebo の GUI を出すかどうか -->
+    <arg name="headless" default="False" />
+    <!-- 手の位置のソース：marker or mocap -->
+    <arg name="hand_source" default="marker" />
+    <!-- =====================================
+       DRAGON + Gazebo + 目・手モデル (task)
+       ===================================== -->
+    <include file="$(find aerial_handover)/launch/task.launch">
+        <arg name="rm" value="$(arg rm)" />
+        <arg name="sim" value="$(arg sim)" />
+        <arg name="headless" value="$(arg headless)" />
+        <arg name="hand_source" value="$(arg hand_source)" />
+    </include>
+
+    <include if="$(arg sim)" file="$(find aerial_handover)/launch/handover_nav.launch">
+        <arg name="hand_source" value="$(arg hand_source)" />
+    </include>
+
+</launch>

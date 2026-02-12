@@ -1,0 +1,543 @@
+<?xml version="1.0" ?>
+<robot name="hydrus">
+  <baselink name="fc"/>
+  <thrust_link name="thrust"/>
+  <m_f_rate value="-0.0172"/>
+  <link name="link1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.357 0.0 0.018"/>
+      <mass value="0.58712"/>
+      <inertia ixx="0.00179" ixy="0.00000" ixz="0.00067" iyy="0.01605" iyz="0.00000" izz="0.01714"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.3 0 0"/>
+      <geometry>
+        <mesh filename="link1.stl"/>
+      </geometry>
+    </visual>
+    <collision name="link1">
+      <origin rpy="0 0 0" xyz="0.3 0 0"/>
+      <geometry>
+        <mesh filename="link1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="link1">
+    <dampingFactor>0.00</dampingFactor>
+  </gazebo>
+  <joint name="rotor1" type="continuous">
+    <limit effort="100.0" lower="1.0" upper="20.0" velocity="0.5"/>
+    <parent link="link1"/>
+    <child link="thrust1"/>
+    <origin rpy="0 0 0" xyz="0.3 0 0.013"/>
+    <axis xyz="0 0 -1"/>
+  </joint>
+  <link name="thrust1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.0001"/>
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00002"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.032"/>
+      <geometry>
+        <mesh filename="T-motor-CF-14inch-CW.stl"/>
+      </geometry>
+    </visual>
+    <collision name="thrust1">
+      <origin rpy="0 0 0" xyz="0 0 0.032"/>
+      <geometry>
+        <mesh filename="T-motor-CF-14inch-CW.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="thrust1">
+    <dampingFactor>0.00</dampingFactor>
+  </gazebo>
+  <joint name="link12leg1" type="fixed">
+    <parent link="link1"/>
+    <child link="leg1"/>
+    <origin rpy="0 0 0" xyz="0.041159999999999974 0.0 0"/>
+  </joint>
+  <link name="leg1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0005 -0.09411"/>
+      <mass value="0.0471"/>
+      <inertia ixx="0.000251" ixy="0.000000" ixz="0.000000" iyy="0.000242" iyz="0.000000" izz="0.000011"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="end_leg.stl"/>
+      </geometry>
+    </visual>
+    <collision name="leg1">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="end_leg.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint1" type="revolute">
+    <limit effort="10.0" lower="-1.5707963267948966" upper="1.5707963267948966" velocity="0.5"/>
+    <parent link="link1"/>
+    <child link="link2"/>
+    <origin rpy="0 0 0" xyz="0.6 0 0"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.9" friction="0.05"/>
+  </joint>
+  <link name="root">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.00001"/>
+      <inertia ixx="0.000001" ixy="0.0" ixz="0.0" iyy="0.000001" iyz="0.0" izz="0.000002"/>
+    </inertial>
+  </link>
+  <joint name="root_joint" type="fixed">
+    <parent link="root"/>
+    <child link="link1"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <gazebo reference="link1">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <link name="link2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.3 0.0 0.01287"/>
+      <mass value="0.55744"/>
+      <inertia ixx="0.00171" ixy="0.00000" ixz="0.00001" iyy="0.01727" iyz="0.00000" izz="0.01844"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.3 0 0"/>
+      <geometry>
+        <mesh filename="link2.stl"/>
+      </geometry>
+    </visual>
+    <collision name="link2">
+      <origin rpy="0 0 0" xyz="0.3 0 0"/>
+      <geometry>
+        <mesh filename="link2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="link2">
+    <dampingFactor>0.00</dampingFactor>
+  </gazebo>
+  <joint name="rotor2" type="continuous">
+    <limit effort="100.0" lower="1.0" upper="20.0" velocity="0.5"/>
+    <parent link="link2"/>
+    <child link="thrust2"/>
+    <origin rpy="0 0 0" xyz="0.3 0 0.013"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="thrust2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.0001"/>
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00002"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.032"/>
+      <geometry>
+        <mesh filename="T-motor-CF-14inch-CCW.stl"/>
+      </geometry>
+    </visual>
+    <collision name="thrust2">
+      <origin rpy="0 0 0" xyz="0 0 0.032"/>
+      <geometry>
+        <mesh filename="T-motor-CF-14inch-CCW.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="thrust2">
+    <dampingFactor>0.00</dampingFactor>
+  </gazebo>
+  <joint name="link22leg2" type="fixed">
+    <parent link="link2"/>
+    <child link="leg2"/>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
+  </joint>
+  <link name="leg2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0005 -0.09521"/>
+      <mass value="0.0471"/>
+      <inertia ixx="0.000251" ixy="0.000000" ixz="0.000000" iyy="0.000242" iyz="0.000000" izz="0.000011"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="joint_leg.stl"/>
+      </geometry>
+    </visual>
+    <collision name="leg2">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="joint_leg.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint2" type="revolute">
+    <limit effort="10.0" lower="-1.5707963267948966" upper="1.5707963267948966" velocity="0.5"/>
+    <parent link="link2"/>
+    <child link="link3"/>
+    <origin rpy="0 0 0" xyz="0.6 0 0"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.9" friction="0.05"/>
+  </joint>
+  <gazebo reference="link2">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <link name="link3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.2683 0.0 0.01836"/>
+      <mass value="0.63453"/>
+      <inertia ixx="0.00182" ixy="0.00000" ixz="-0.00077" iyy="0.02232" iyz="0.00000" izz="0.02254"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.3 0 0"/>
+      <geometry>
+        <mesh filename="link3.stl"/>
+      </geometry>
+    </visual>
+    <collision name="link3">
+      <origin rpy="0 0 0" xyz="0.3 0 0"/>
+      <geometry>
+        <mesh filename="link3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="link3">
+    <dampingFactor>0.00</dampingFactor>
+  </gazebo>
+  <joint name="rotor3" type="continuous">
+    <limit effort="100.0" lower="1.0" upper="20.0" velocity="0.5"/>
+    <parent link="link3"/>
+    <child link="thrust3"/>
+    <origin rpy="0 0 0" xyz="0.3 0 0.013"/>
+    <axis xyz="0 0 -1"/>
+  </joint>
+  <link name="thrust3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.0001"/>
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00002"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.032"/>
+      <geometry>
+        <mesh filename="T-motor-CF-14inch-CW.stl"/>
+      </geometry>
+    </visual>
+    <collision name="thrust3">
+      <origin rpy="0 0 0" xyz="0 0 0.032"/>
+      <geometry>
+        <mesh filename="T-motor-CF-14inch-CW.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="thrust3">
+    <dampingFactor>0.00</dampingFactor>
+  </gazebo>
+  <joint name="link32leg3" type="fixed">
+    <parent link="link3"/>
+    <child link="leg3"/>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
+  </joint>
+  <link name="leg3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0005 -0.09521"/>
+      <mass value="0.0471"/>
+      <inertia ixx="0.000251" ixy="0.000000" ixz="0.000000" iyy="0.000242" iyz="0.000000" izz="0.000011"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="joint_leg.stl"/>
+      </geometry>
+    </visual>
+    <collision name="leg3">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="joint_leg.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint3" type="revolute">
+    <limit effort="10.0" lower="-1.5707963267948966" upper="1.5707963267948966" velocity="0.5"/>
+    <parent link="link3"/>
+    <child link="link4"/>
+    <origin rpy="0 0 0" xyz="0.6 0 0"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.9" friction="0.05"/>
+  </joint>
+  <gazebo reference="link3">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <link name="link4">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.242 0.0 0.0188"/>
+      <mass value="0.590"/>
+      <inertia ixx="0.00179" ixy="0.00000" ixz="-0.00067" iyy="0.01581" iyz="0.00000" izz="0.01692"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.3 0 0"/>
+      <geometry>
+        <mesh filename="link4.stl"/>
+      </geometry>
+    </visual>
+    <collision name="link4">
+      <origin rpy="0 0 0" xyz="0.3 0 0"/>
+      <geometry>
+        <mesh filename="link4.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="link4">
+    <dampingFactor>0.00</dampingFactor>
+  </gazebo>
+  <joint name="rotor4" type="continuous">
+    <limit effort="100.0" lower="1.0" upper="20.0" velocity="0.5"/>
+    <parent link="link4"/>
+    <child link="thrust4"/>
+    <origin rpy="0 0 0" xyz="0.3 0 0.013"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="thrust4">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.0001"/>
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00002"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.032"/>
+      <geometry>
+        <mesh filename="T-motor-CF-14inch-CCW.stl"/>
+      </geometry>
+    </visual>
+    <collision name="thrust4">
+      <origin rpy="0 0 0" xyz="0 0 0.032"/>
+      <geometry>
+        <mesh filename="T-motor-CF-14inch-CCW.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="thrust4">
+    <dampingFactor>0.00</dampingFactor>
+  </gazebo>
+  <joint name="link42leg4" type="fixed">
+    <parent link="link4"/>
+    <child link="leg4"/>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
+  </joint>
+  <link name="leg4">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0005 -0.09521"/>
+      <mass value="0.0471"/>
+      <inertia ixx="0.000251" ixy="0.000000" ixz="0.000000" iyy="0.000242" iyz="0.000000" izz="0.000011"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="joint_leg.stl"/>
+      </geometry>
+    </visual>
+    <collision name="leg4">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="joint_leg.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="link42leg5" type="fixed">
+    <parent link="link4"/>
+    <child link="leg5"/>
+    <origin rpy="0 0 0" xyz="0.55884 0.0 0"/>
+  </joint>
+  <link name="leg5">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0005 -0.09411"/>
+      <mass value="0.0471"/>
+      <inertia ixx="0.000251" ixy="0.000000" ixz="0.000000" iyy="0.000242" iyz="0.000000" izz="0.000011"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="end_leg.stl"/>
+      </geometry>
+    </visual>
+    <collision name="leg5">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="end_leg.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="link4">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <joint name="link12bat1" type="fixed">
+    <parent link="link1"/>
+    <child link="bat1"/>
+    <origin rpy="0 0 0" xyz="0.3 0.0 -0.048"/>
+  </joint>
+  <link name="bat1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.4108"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0006" iyz="0.0" izz="0.0006"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="Kypom-3000-6s.stl"/>
+      </geometry>
+    </visual>
+    <collision name="bat1">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="Kypom-3000-6s.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="link42bat2" type="fixed">
+    <parent link="link4"/>
+    <child link="bat2"/>
+    <origin rpy="0 0 0" xyz="0.3 0.0 -0.048"/>
+  </joint>
+  <link name="bat2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.4108"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0006" iyz="0.0" izz="0.0006"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="Kypom-3000-6s.stl"/>
+      </geometry>
+    </visual>
+    <collision name="bat2">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="Kypom-3000-6s.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="link22fc" type="fixed">
+    <parent link="link2"/>
+    <child link="fc"/>
+    <origin rpy="0 0 0" xyz="0.5221 -0.0044 0.02135"/>
+  </joint>
+  <link name="fc">
+    <inertial>
+      <mass value="0.05"/>
+      <origin rpy="0 0 0" xyz="0.013000000000000001 0.0044 -0.009000000000000001"/>
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00002"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="spinal.stl"/>
+      </geometry>
+    </visual>
+    <collision name="fc">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="spinal.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="link32pc" type="fixed">
+    <parent link="link3"/>
+    <child link="pc"/>
+    <origin rpy="0 0 0" xyz="0.06225 0.0 -0.01"/>
+  </joint>
+  <link name="pc">
+    <inertial>
+      <mass value="0.181"/>
+      <origin rpy="0 0 0" xyz="0.018000000000000002 0.004 -0.018000000000000002"/>
+      <inertia ixx="0.00007" ixy="0.0" ixz="0.0" iyy="0.00003" iyz="0.0" izz="0.00009"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="jetson_tx2_unit.stl"/>
+      </geometry>
+    </visual>
+    <collision name="pc">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="jetson_tx2_unit.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="link32leddarone" type="fixed">
+    <parent link="link3"/>
+    <child link="leddarone"/>
+    <origin rpy="3.141592653589793 0 0" xyz="0.11449999999999999 0.0 -0.0626"/>
+  </joint>
+  <link name="leddarone">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.008 0.0 0.0"/>
+      <mass value="0.025"/>
+      <inertia ixx="0.00001" ixy="0.000000" ixz="0.000000" iyy="0.000006" iyz="0.000000" izz="0.00001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="leddar_one_tx2_attached_mode.stl"/>
+      </geometry>
+    </visual>
+    <collision name="leddarone">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="leddar_one_tx2_attached_mode.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="link22gps" type="fixed">
+    <parent link="link2"/>
+    <child link="gps"/>
+    <origin rpy="0 0 0" xyz="0.4925 0.0 0.152"/>
+  </joint>
+  <link name="gps">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.000000 0.000000 -0.013"/>
+      <mass value="0.042"/>
+      <inertia ixx="0.00006" ixy="0.000000" ixz="0.000000" iyy="0.00006" iyz="0.000000" izz="0.000007"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="gps_ublox_m8n.stl"/>
+      </geometry>
+    </visual>
+    <collision name="gps">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="gps_ublox_m8n.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="gps2magnet" type="fixed">
+    <parent link="gps"/>
+    <child link="magnet"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+  <link name="magnet">
+    <inertial>
+      <mass value="0.00001"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.000001" ixy="0.0" ixz="0.0" iyy="0.000001" iyz="0.0" izz="0.000002"/>
+    </inertial>
+  </link>
+  <mujoco>
+    <compiler balanceinertia="true"/>
+    <option/>
+  </mujoco>
+</robot>

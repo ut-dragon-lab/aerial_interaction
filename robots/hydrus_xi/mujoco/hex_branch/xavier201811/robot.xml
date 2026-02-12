@@ -1,0 +1,164 @@
+<?xml version="1.0" ?>
+<mujoco model="hydrus_xi">
+  <compiler angle="radian" autolimits="true" balanceinertia="true"/>
+  <statistic meansize="0.305184" extent="2.49599" center="0.255511 5.75957e-06 0.0278078"/>
+  <asset>
+    <mesh name="center_link" file="center_link.stl"/>
+    <mesh name="middle_link" file="middle_link.stl"/>
+    <mesh name="propeller_link" file="propeller_link.stl"/>
+    <mesh name="T-motor-CF-14inch-CCW" file="T-motor-CF-14inch-CCW.stl"/>
+    <mesh name="battery" file="battery.stl"/>
+    <mesh name="end_link1" file="end_link1.stl"/>
+    <mesh name="T-motor-CF-14inch-CW" file="T-motor-CF-14inch-CW.stl"/>
+    <mesh name="fc3" file="fc3.stl"/>
+    <mesh name="xavier_2" file="xavier_2.stl"/>
+    <mesh name="zed_mini" file="zed_mini.stl"/>
+    <mesh name="leddar_one" file="leddar_one.stl"/>
+  </asset>
+  <worldbody>
+    <body name="center_link" pos="0 0 0.2">
+      <inertial pos="-0.000001 0.000000 0.031426" mass="0.970304" fullinertia="0.011445 0.011444 0.021712 -0.000000 -0.000000 0.000000"/>
+      <freejoint/>
+      <geom name="center_link" type="mesh" mesh="center_link" contype="1" conaffinity="0"/>
+      <geom name="fc" pos="-0.0129 -0.0044 0.03933" type="mesh" mesh="fc3" contype="1" conaffinity="0"/>
+      <geom name="pc" pos="-0.01075 0.0005 -0.0775" type="mesh" mesh="xavier_2" contype="1" conaffinity="0"/>
+      <geom name="zed_camera_center" pos="0.05504 0.09534 0.029" quat="0.866025 0 0 0.5" type="mesh" mesh="zed_mini" contype="1" conaffinity="0"/>
+      <geom name="leddarone" pos="0.082 0 -0.027" quat="0 0.707107 0.707107 0" type="mesh" mesh="leddar_one" contype="1" conaffinity="0"/>
+      <body name="link1" pos="0.1555 0 0.015">
+        <inertial pos="0.306066 5.21785e-05 -0.00462273" quat="0.977374 -0.000284951 0.211514 0.00131671" mass="0.728052" diaginertia="0.0103918 0.0103901 0.00980579"/>
+        <joint name="joint1" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" damping="150"/>
+        <geom name="link1" pos="0.6 0 0" quat="0 0 0 1" type="mesh" mesh="middle_link" contype="1" conaffinity="0"/>
+        <geom name="bat1" pos="0.2867 0 -0.048" quat="0.707107 0 0 0.707107" type="mesh" mesh="battery" contype="1" conaffinity="0"/>
+        <body name="link2" pos="0.6 0 0">
+          <inertial pos="0.276958 2.31736e-05 -0.0185141" quat="0.567651 0.423089 0.424907 0.564112" mass="0.648151" diaginertia="0.00975206 0.00926067 0.00058434"/>
+          <joint name="joint2" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" damping="150"/>
+          <geom name="link2" pos="0.6 0 0" quat="0 0 0 1" type="mesh" mesh="end_link1" contype="1" conaffinity="0"/>
+          <geom name="bat2" pos="0.2867 0 -0.048" quat="0.707107 0 0 0.707107" type="mesh" mesh="battery" contype="1" conaffinity="0"/>
+          <body name="gimbal_link2" pos="0.2984 0 0.04867" quat="0 0 0 1">
+            <inertial pos="-0.0106636 0 0.0499234" quat="0 0.386546 0 0.92227" mass="0.23715" diaginertia="0.00463867 0.00463867 0.00463867"/>
+            <joint name="gimbal2" pos="0 0 0" axis="0 0 1" range="-18.8496 18.8496" damping="0.8"/>
+            <geom name="gimbal_link2" type="mesh" mesh="propeller_link" contype="1" conaffinity="0"/>
+            <body name="thrust2" pos="0 0 0.06041" quat="0.984808 0 0.173648 0">
+              <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.02" diaginertia="3.1684e-06 1.5842e-06 1.5842e-06"/>
+              <geom name="thrust2" type="mesh" mesh="T-motor-CF-14inch-CW" contype="1" conaffinity="0"/>
+              <site name="rotor2" pos="0 0 0"/>
+            </body>
+          </body>
+        </body>
+        <body name="gimbal_link1" pos="0.2984 0 0.04867" quat="0 0 0 1">
+          <inertial pos="-0.0106636 0 0.0499234" quat="0 0.386546 0 0.92227" mass="0.23715" diaginertia="0.00463867 0.00463867 0.00463867"/>
+          <joint name="gimbal1" pos="0 0 0" axis="0 0 1" range="-18.8496 18.8496" damping="0.8"/>
+          <geom name="gimbal_link1" type="mesh" mesh="propeller_link" contype="1" conaffinity="0"/>
+          <body name="thrust1" pos="0 0 0.06041" quat="0.984808 0 0.173648 0">
+            <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.02" diaginertia="3.1684e-06 1.5842e-06 1.5842e-06"/>
+            <geom name="thrust1" type="mesh" mesh="T-motor-CF-14inch-CCW" contype="1" conaffinity="0"/>
+            <site name="rotor1" pos="0 0 0"/>
+          </body>
+        </body>
+      </body>
+      <body name="link3" pos="-0.07775 0.13467 0.015" quat="0.5 0 0 0.866025">
+        <inertial pos="0.306066 5.21785e-05 -0.00462273" quat="0.977374 -0.000284951 0.211514 0.00131671" mass="0.728052" diaginertia="0.0103918 0.0103901 0.00980579"/>
+        <joint name="joint3" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" damping="150"/>
+        <geom name="link3" pos="0.6 0 0" quat="0 0 0 1" type="mesh" mesh="middle_link" contype="1" conaffinity="0"/>
+        <geom name="bat3" pos="0.2867 0 -0.048" quat="0.707107 0 0 0.707107" type="mesh" mesh="battery" contype="1" conaffinity="0"/>
+        <body name="link4" pos="0.6 0 0">
+          <inertial pos="0.276958 2.31736e-05 -0.0185141" quat="0.567651 0.423089 0.424907 0.564112" mass="0.648151" diaginertia="0.00975206 0.00926067 0.00058434"/>
+          <joint name="joint4" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" damping="150"/>
+          <geom name="link4" pos="0.6 0 0" quat="0 0 0 1" type="mesh" mesh="end_link1" contype="1" conaffinity="0"/>
+          <geom name="bat4" pos="0.2867 0 -0.048" quat="0.707107 0 0 0.707107" type="mesh" mesh="battery" contype="1" conaffinity="0"/>
+          <body name="gimbal_link4" pos="0.2984 0 0.04867" quat="0 0 0 1">
+            <inertial pos="-0.0106636 0 0.0499234" quat="0 0.386546 0 0.92227" mass="0.23715" diaginertia="0.00463867 0.00463867 0.00463867"/>
+            <joint name="gimbal4" pos="0 0 0" axis="0 0 1" range="-18.8496 18.8496" damping="0.8"/>
+            <geom name="gimbal_link4" type="mesh" mesh="propeller_link" contype="1" conaffinity="0"/>
+            <body name="thrust4" pos="0 0 0.06041" quat="0.984808 0 0.173648 0">
+              <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.02" diaginertia="3.1684e-06 1.5842e-06 1.5842e-06"/>
+              <geom name="thrust4" type="mesh" mesh="T-motor-CF-14inch-CW" contype="1" conaffinity="0"/>
+              <site name="rotor4" pos="0 0 0"/>
+            </body>
+          </body>
+        </body>
+        <body name="gimbal_link3" pos="0.2984 0 0.04867" quat="0 0 0 1">
+          <inertial pos="-0.0106636 0 0.0499234" quat="0 0.386546 0 0.92227" mass="0.23715" diaginertia="0.00463867 0.00463867 0.00463867"/>
+          <joint name="gimbal3" pos="0 0 0" axis="0 0 1" range="-18.8496 18.8496" damping="0.8"/>
+          <geom name="gimbal_link3" type="mesh" mesh="propeller_link" contype="1" conaffinity="0"/>
+          <body name="thrust3" pos="0 0 0.06041" quat="0.984808 0 0.173648 0">
+            <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.02" diaginertia="3.1684e-06 1.5842e-06 1.5842e-06"/>
+            <geom name="thrust3" type="mesh" mesh="T-motor-CF-14inch-CCW" contype="1" conaffinity="0"/>
+            <site name="rotor3" pos="0 0 0"/>
+          </body>
+        </body>
+      </body>
+      <body name="link5" pos="-0.07775 -0.13467 0.015" quat="-0.5 0 0 0.866025">
+        <inertial pos="0.306066 5.21785e-05 -0.00462273" quat="0.977374 -0.000284951 0.211514 0.00131671" mass="0.728052" diaginertia="0.0103918 0.0103901 0.00980579"/>
+        <joint name="joint5" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" damping="150"/>
+        <geom name="link5" pos="0.6 0 0" quat="0 0 0 1" type="mesh" mesh="middle_link" contype="1" conaffinity="0"/>
+        <geom name="bat5" pos="0.2867 0 -0.048" quat="0.707107 0 0 0.707107" type="mesh" mesh="battery" contype="1" conaffinity="0"/>
+        <body name="link6" pos="0.6 0 0">
+          <inertial pos="0.276958 2.31736e-05 -0.0185141" quat="0.567651 0.423089 0.424907 0.564112" mass="0.648151" diaginertia="0.00975206 0.00926067 0.00058434"/>
+          <joint name="joint6" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" damping="150"/>
+          <geom name="link6" pos="0.6 0 0" quat="0 0 0 1" type="mesh" mesh="end_link1" contype="1" conaffinity="0"/>
+          <geom name="bat6" pos="0.2867 0 -0.048" quat="0.707107 0 0 0.707107" type="mesh" mesh="battery" contype="1" conaffinity="0"/>
+          <body name="gimbal_link6" pos="0.2984 0 0.04867" quat="0 0 0 1">
+            <inertial pos="-0.0106636 0 0.0499234" quat="0 0.386546 0 0.92227" mass="0.23715" diaginertia="0.00463867 0.00463867 0.00463867"/>
+            <joint name="gimbal6" pos="0 0 0" axis="0 0 1" range="-18.8496 18.8496" damping="0.8"/>
+            <geom name="gimbal_link6" type="mesh" mesh="propeller_link" contype="1" conaffinity="0"/>
+            <body name="thrust6" pos="0 0 0.06041" quat="0.984808 0 0.173648 0">
+              <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.02" diaginertia="3.1684e-06 1.5842e-06 1.5842e-06"/>
+              <geom name="thrust6" type="mesh" mesh="T-motor-CF-14inch-CW" contype="1" conaffinity="0"/>
+              <site name="rotor6" pos="0 0 0"/>
+            </body>
+          </body>
+        </body>
+        <body name="gimbal_link5" pos="0.2984 0 0.04867" quat="0 0 0 1">
+          <inertial pos="-0.0106636 0 0.0499234" quat="0 0.386546 0 0.92227" mass="0.23715" diaginertia="0.00463867 0.00463867 0.00463867"/>
+          <joint name="gimbal5" pos="0 0 0" axis="0 0 1" range="-18.8496 18.8496" damping="0.8"/>
+          <geom name="gimbal_link5" type="mesh" mesh="propeller_link" contype="1" conaffinity="0"/>
+          <body name="thrust5" pos="0 0 0.06041" quat="0.984808 0 0.173648 0">
+            <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.02" diaginertia="3.1684e-06 1.5842e-06 1.5842e-06"/>
+            <geom name="thrust5" type="mesh" mesh="T-motor-CF-14inch-CCW" contype="1" conaffinity="0"/>
+            <site name="rotor5" pos="0 0 0"/>
+          </body>
+        </body>
+      </body>
+      <site name="fc" pos="-0.0129 -0.0044 0.03933"/>
+      <body name="fc" pos="-0.0129 -0.0044 0.03933" quat="1 0 0 0">
+        <inertial pos="0.012999 0.004396 -0.004856" mass="0.009434" fullinertia="0.000004 0.000004 0.000008 0.000001 -0.000001 -0.000000"/>
+      </body>
+      <body name="pc" pos="-0.01075 0.0005 -0.0775" quat="1 0 0 0">
+        <inertial pos="-0.000890 -0.000110 0.028700" mass="0.549000" fullinertia="0.000452 0.000453 0.000453 0.000000 0.00000 0.0000000"/>
+      </body>
+      <body name="zed_camera_center" pos="0.05504 0.09534 0.029" quat="0.866025 0 0 0.5">
+        <inertial pos="0.000430 0.006110 0.000000" mass="0.090000" fullinertia="0.000117 0.000010 0.000117 0.000000 0.000000 0.000000"/>
+      </body>
+      <body name="leddarone" pos="0.082 0 -0.027" quat="0 0.707107 0.707107 0">
+        <inertial pos="0.000000 -0.009700 -0.004610" mass="0.028000" fullinertia="0.000007 0.000009 0.000007 0.000000 0.000000 0.000001"/>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="rotor1" ctrllimited="true" ctrlrange="1 35.5" gear="0 0 1 0 0 -0.0182" site="rotor1"/>
+    <motor name="rotor2" ctrllimited="true" ctrlrange="1 35.5" gear="0 0 1 0 0 0.0182" site="rotor2"/>
+    <motor name="rotor3" ctrllimited="true" ctrlrange="1 35.5" gear="0 0 1 0 0 -0.0182" site="rotor3"/>
+    <motor name="rotor4" ctrllimited="true" ctrlrange="1 35.5" gear="0 0 1 0 0 0.0182" site="rotor4"/>
+    <motor name="rotor5" ctrllimited="true" ctrlrange="1 35.5" gear="0 0 1 0 0 -0.0182" site="rotor5"/>
+    <motor name="rotor6" ctrllimited="true" ctrlrange="1 35.5" gear="0 0 1 0 0 0.0182" site="rotor6"/>
+    <position name="joint1" kp="40" joint="joint1"/>
+    <position name="joint3" kp="40" joint="joint3"/>
+    <position name="joint5" kp="40" joint="joint5"/>
+    <position name="joint2" kp="40" joint="joint2"/>
+    <position name="gimbal1" kp="40" joint="gimbal1"/>
+    <position name="gimbal2" kp="40" joint="gimbal2"/>
+    <position name="joint4" kp="40" joint="joint4"/>
+    <position name="gimbal3" kp="40" joint="gimbal3"/>
+    <position name="gimbal4" kp="40" joint="gimbal4"/>
+    <position name="joint6" kp="40" joint="joint6"/>
+    <position name="gimbal5" kp="40" joint="gimbal5"/>
+    <position name="gimbal6" kp="40" joint="gimbal6"/>
+  </actuator>
+  <sensor>
+    <accelerometer name="acc" site="fc"/>
+    <gyro name="gyro" site="fc"/>
+    <magnetometer name="mag" site="fc"/>
+  </sensor>
+  <include file="../../../../../../aerial_robot_3rdparty/mujoco_ros_control/config/world.xml"/>
+</mujoco>

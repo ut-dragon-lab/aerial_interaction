@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<robot name="cam_bot">
+
+  <!-- ===== 元の基準リンク（これ自体は今まで通り） ===== -->
+  <link name="camera_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="1e-3" ixy="0" ixz="0" iyy="1e-3" iyz="0" izz="1e-3"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- ===== 左右カメラ用リンク ===== -->
+  <link name="camera_left_link"/>
+  <link name="camera_right_link"/>
+
+  <!-- ===== IPD: 6.4cm → 片側 3.2cm ===== -->
+  <!-- “左右方向”がどの軸か不明なので、まずはY方向に±0.032で作ります -->
+  <joint name="camera_left_joint" type="fixed">
+    <parent link="camera_link"/>
+    <child link="camera_left_link"/>
+    <origin xyz="0 0.032 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="camera_right_joint" type="fixed">
+    <parent link="camera_link"/>
+    <child link="camera_right_link"/>
+    <origin xyz="0 -0.032 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ===== 左カメラ ===== -->
+  <gazebo reference="camera_left_link">
+    <gravity>false</gravity>
+
+    <sensor type="camera" name="eye_left_camera">
+      <update_rate>30</update_rate>
+      <camera>
+        <horizontal_fov>1.3962634</horizontal_fov> <!-- 80deg -->
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip><near>0.02</near><far>50</far></clip>
+      </camera>
+
+      <always_on>true</always_on>
+      <visualize>false</visualize>
+
+      <plugin name="gazebo_ros_eye_left" filename="libgazebo_ros_camera.so">
+        <robotNamespace>/</robotNamespace>
+        <frameName>camera_left_link</frameName>
+        <cameraName>eye_left</cameraName>
+        <imageTopicName>/eye_left/image_raw</imageTopicName>
+        <cameraInfoTopicName>/eye_left/camera_info</cameraInfoTopicName>
+        <updateRate>30.0</updateRate>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- ===== 右カメラ ===== -->
+  <gazebo reference="camera_right_link">
+    <gravity>false</gravity>
+
+    <sensor type="camera" name="eye_right_camera">
+      <update_rate>30</update_rate>
+      <camera>
+        <horizontal_fov>1.3962634</horizontal_fov> <!-- 80deg -->
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip><near>0.02</near><far>50</far></clip>
+      </camera>
+
+      <always_on>true</always_on>
+      <visualize>false</visualize>
+
+      <plugin name="gazebo_ros_eye_right" filename="libgazebo_ros_camera.so">
+        <robotNamespace>/</robotNamespace>
+        <frameName>camera_right_link</frameName>
+        <cameraName>eye_right</cameraName>
+        <imageTopicName>/eye_right/image_raw</imageTopicName>
+        <cameraInfoTopicName>/eye_right/camera_info</cameraInfoTopicName>
+        <updateRate>30.0</updateRate>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+</robot>

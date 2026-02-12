@@ -1,0 +1,26 @@
+# Dragon Handover Navigation Parameters
+
+# Joint names (in order)
+joint_names:
+  - "joint1_pitch"
+  - "joint1_yaw"
+  - "joint2_pitch"
+  - "joint2_yaw"
+  - "joint3_pitch"
+  - "joint3_yaw"
+
+# Geometric parameters
+geometry:
+  link_length: 0.44  # Single link length (meters)
+  safe_distance: 1.0  # Safe distance from human center (meters)
+  comfortable_distance: 2.0  # Comfortable distance for robots outside FOV (meters)
+
+# Human field of view
+human_fov: 150.0  # Human field of view in degrees
+
+# Navigation parameters
+navigation:
+  num_arc_waypoints: 10  # Number of waypoints for arc motion
+  joint_angle_tolerance: 0.05  # Joint angle tolerance (radians)
+  nav_position_tolerance: 0.1  # Navigation position tolerance (meters)
+  nav_yaw_tolerance: 0.1  # Navigation yaw tolerance (radians)

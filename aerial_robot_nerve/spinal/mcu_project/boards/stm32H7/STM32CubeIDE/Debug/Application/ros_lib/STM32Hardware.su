@@ -1,0 +1,18 @@
+STM32Hardware.cpp:33:6:void HAL_UART_TxCpltCallback(UART_HandleTypeDef*)	16	static
+STM32Hardware.cpp:38:6:void HAL_UART_ErrorCallback(UART_HandleTypeDef*)	16	static
+STM32Hardware.cpp:46:6:void STM32Hardware::init(UART_HandleTypeDef*, QueueDefinition**, QueueDefinition**)	32	static
+STM32Hardware.cpp:78:6:void udpRecvCb(void*, udp_pcb*, pbuf*, const ip_addr_t*, uint16_t)	24	static
+STM32Hardware.cpp:91:6:void STM32Hardware::init(ip4_addr_t, uint16_t, uint16_t)	24	static
+STM32Hardware.cpp:115:6:bool STM32Hardware::rx_available()	24	static
+STM32Hardware.cpp:135:5:int STM32Hardware::read()	40	static
+STM32Hardware.cpp:175:5:int STM32Hardware::publish()	32	static
+STM32Hardware.cpp:214:6:void STM32Hardware::write(uint8_t*, uint16_t)	40	static
+STM32Hardware.h:51:3:RingBuffer<T, SIZE>::RingBuffer() [with T = unsigned char; int SIZE = 512]	16	static
+STM32Hardware.h:125:6:T* RingBuffer<T, SIZE>::getBuf() [with T = unsigned char; int SIZE = 512]	16	static
+STM32Hardware.h:94:8:bool RingBuffer<T, SIZE>::push(T*, uint16_t) [with T = unsigned char; int SIZE = 512]	32	static
+STM32Hardware.h:120:8:bool RingBuffer<T, SIZE>::available() [with T = unsigned char; int SIZE = 512]	16	static
+STM32Hardware.h:59:8:bool RingBuffer<T, SIZE>::pop(T*, uint16_t) [with T = unsigned char; int SIZE = 512]	24	static
+STM32Hardware.cpp:272:1:void __static_initialization_and_destruction_0(int, int)	16	static
+STM32Hardware.h:57:3:RingBuffer<T, SIZE>::~RingBuffer() [with T = unsigned char; int SIZE = 512]	16	static
+STM32Hardware.cpp:272:1:cpp)	8	static
+STM32Hardware.cpp:272:1:cpp)	8	static

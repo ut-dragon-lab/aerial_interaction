@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot name="hand">
+
+  <link name="hand_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="1e-3" ixy="0" ixz="0" iyy="1e-3" iyz="0" izz="1e-3"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/>
+      <geometry>
+          <mesh filename="package://aerial_handover/urdf/mesh/hand.dae" scale= "0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <gazebo reference="hand_link">
+    <gravity>false</gravity>
+  </gazebo>
+
+</robot>

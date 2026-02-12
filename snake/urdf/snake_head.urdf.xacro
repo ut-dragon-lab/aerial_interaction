@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<robot
+    xmlns:xacro="https://www.ros.org/wiki/xacro" name="snake_head" >
+
+
+  <!-- snake gripper attached to link1 tip -->
+  <link name="snake">
+    <inertial>
+      <origin xyz="0.07109 -0.00071 0.00389" rpy="0 0 0"/>
+      <mass value="0.3446"/>
+      <inertia
+          ixx="5.3493622e-4"
+          ixy="-4.72007e-6"
+          ixz="-9.435527e-5"
+          iyy="1.65858192e-3"
+          iyz="-1.048069e-5"
+          izz="1.65746618e-3"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://snake/urdf/mesh/dragon_snake_link_v2.1.STL"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.6 0.6 0.6 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="link1_to_snake" type="fixed">
+    <parent link="link1"/>
+    <child link="snake"/>
+    <origin xyz=" 0 0 0" rpy="0 0 3.14"/>
+  </joint>
+
+</robot>
+

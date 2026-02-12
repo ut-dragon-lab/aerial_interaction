@@ -1,0 +1,5 @@
+<library_images>
+  <image id="doubletag_texture_png" name="doubletag_texture_png">
+    <init_from>../materials/textures/doubletag_texture.png</init_from>
+  </image>
+</library_images>

@@ -1,0 +1,18 @@
+cmath:241:3:constexpr float std::fabs(float)	16	static
+imu_basic.h:43:16:virtual void IMU::ledOutput()	16	static
+imu_basic.h:57:8:void IMU::setUpdate(bool)	16	static
+imu_basic.cpp:11:1:IMU::IMU()	16	static
+imu_basic.cpp:16:6:void IMU::init()	24	static
+imu_basic.cpp:45:6:void IMU::readCalibData()	16	static
+imu_basic.cpp:50:6:void IMU::writeCalibData()	16	static
+imu_basic.cpp:56:6:void IMU::update()	16	static
+imu_basic.cpp:66:6:void IMU::process()	112	static
+imu_basic.cpp:180:6:void IMU::gyroCalib(bool, float)	24	static
+imu_basic.cpp:196:6:void IMU::accCalib(bool, float)	24	static
+imu_basic.cpp:216:6:void IMU::magCalib(bool, float)	64	static
+imu_basic.cpp:235:6:void IMU::resetCalib()	56	static
+vector3.h:75:5:ap::Vector3<T>::Vector3() [with T = float]	16	static
+vector3.h:181:10:void ap::Vector3<T>::zero() [with T = float]	16	static
+vector3.h:123:9:T& ap::Vector3<T>::operator[](uint8_t) [with T = float]	24	static
+vector3.h:155:10:bool ap::Vector3<T>::is_zero() const [with T = float]	16	static
+vector3.h:80:5:ap::Vector3<T>::Vector3(T, T, T) [with T = float]	24	static

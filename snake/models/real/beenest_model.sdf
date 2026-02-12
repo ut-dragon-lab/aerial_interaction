@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sdf version="1.6">
+  <model name="beenest">
+    <static>false</static>
+    <pose>0.05 0 0 0 0 0</pose>
+    <link name="beenest_link">
+      <inertial>
+        <inertia>
+	  <mass>0.126</mass>
+          <ixx>0.00105</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.00302</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.00080</izz>
+        </inertia>
+      </inertial>
+    </link>
+  </model>
+</sdf>

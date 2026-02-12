@@ -1,0 +1,339 @@
+core_cm7.h:2229:22:void SCB_EnableICache()	4	static,ignoring_inline_asm
+core_cm7.h:2281:22:void SCB_EnableDCache()	24	static,ignoring_inline_asm
+gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+STM32Hardware.h:170:3:STM32Hardware::STM32Hardware()	16	static
+STM32Hardware.h:180:3:STM32Hardware::~STM32Hardware()	16	static
+STM32Hardware.h:182:8:void STM32Hardware::init()	16	static
+STM32Hardware.h:196:12:uint32_t STM32Hardware::time()	16	static
+time.h:51:3:ros::Time::Time()	16	static
+msg.h:46:7:constexpr ros::Msg::Msg()	16	static
+Time.h:19:5:std_msgs::Time::Time()	16	static
+Time.h:24:17:virtual int std_msgs::Time::serialize(unsigned char*) const	24	static
+Time.h:40:17:virtual int std_msgs::Time::deserialize(unsigned char*)	24	static
+Time.h:56:26:virtual const char* std_msgs::Time::getType()	16	static
+Time.h:57:26:virtual const char* std_msgs::Time::getMD5()	16	static
+TopicInfo.h:34:5:rosserial_msgs::TopicInfo::TopicInfo()	16	static
+TopicInfo.h:43:17:virtual int rosserial_msgs::TopicInfo::serialize(unsigned char*) const	40	static
+TopicInfo.h:77:17:virtual int rosserial_msgs::TopicInfo::deserialize(unsigned char*)	48	static
+TopicInfo.h:124:26:virtual const char* rosserial_msgs::TopicInfo::getType()	16	static
+TopicInfo.h:125:26:virtual const char* rosserial_msgs::TopicInfo::getMD5()	16	static
+Log.h:25:5:rosserial_msgs::Log::Log()	16	static
+Log.h:31:17:virtual int rosserial_msgs::Log::serialize(unsigned char*) const	24	static
+Log.h:44:17:virtual int rosserial_msgs::Log::deserialize(unsigned char*)	32	static
+Log.h:61:26:virtual const char* rosserial_msgs::Log::getType()	16	static
+Log.h:62:26:virtual const char* rosserial_msgs::Log::getMD5()	16	static
+RequestParam.h:71:5:rosserial_msgs::RequestParamResponse::RequestParamResponse()	16	static
+RequestParam.h:78:17:virtual int rosserial_msgs::RequestParamResponse::serialize(unsigned char*) const	48	static
+RequestParam.h:130:17:virtual int rosserial_msgs::RequestParamResponse::deserialize(unsigned char*)	64	static
+RequestParam.h:200:26:virtual const char* rosserial_msgs::RequestParamResponse::getType()	16	static
+RequestParam.h:201:26:virtual const char* rosserial_msgs::RequestParamResponse::getMD5()	16	static
+publisher.h:48:3:ros::Publisher::Publisher(const char*, ros::Msg*, int)	24	static
+publisher.h:53:7:int ros::Publisher::publish(const ros::Msg*)	16	static
+publisher.h:57:7:int ros::Publisher::getEndpointType()	16	static
+ServoControlCmd.h:24:5:spinal::ServoControlCmd::ServoControlCmd()	16	static
+ServoControlCmd.h:30:17:virtual int spinal::ServoControlCmd::serialize(unsigned char*) const	32	static
+ServoControlCmd.h:60:17:virtual int spinal::ServoControlCmd::deserialize(unsigned char*)	40	static
+ServoControlCmd.h:99:26:virtual const char* spinal::ServoControlCmd::getType()	16	static
+ServoControlCmd.h:100:26:virtual const char* spinal::ServoControlCmd::getMD5()	16	static
+Imu.h:23:5:spinal::Imu::Imu()	16	static
+Imu.h:32:17:virtual int spinal::Imu::serialize(unsigned char*) const	56	static
+Imu.h:96:17:virtual int spinal::Imu::deserialize(unsigned char*)	56	static
+Imu.h:164:26:virtual const char* spinal::Imu::getType()	16	static
+Imu.h:165:26:virtual const char* spinal::Imu::getMD5()	16	static
+quaternion.h:37:5:ap::Quaternion::Quaternion()	16	static
+quaternion.h:109:13:float& ap::Quaternion::operator[](uint8_t)	24	static
+UInt8.h:18:5:std_msgs::UInt8::UInt8()	16	static
+UInt8.h:23:17:virtual int std_msgs::UInt8::serialize(unsigned char*) const	24	static
+UInt8.h:31:17:virtual int std_msgs::UInt8::deserialize(unsigned char*)	24	static
+UInt8.h:39:26:virtual const char* std_msgs::UInt8::getType()	16	static
+UInt8.h:40:26:virtual const char* std_msgs::UInt8::getMD5()	16	static
+imu_basic.h:52:12:ap::Vector3f IMU::getGyro()	48	static
+imu_basic.h:53:12:ap::Vector3f IMU::getAcc()	48	static
+imu_basic.h:54:12:ap::Vector3f IMU::getMag()	48	static
+imu_basic.h:56:8:bool IMU::getUpdate()	16	static
+imu_basic.h:57:8:void IMU::setUpdate(bool)	16	static
+imu_mpu9250.h:23:3:IMUOnboard::IMUOnboard()	16	static
+imu_mpu9250.h:24:3:IMUOnboard::~IMUOnboard()	16	static
+baro.h:28:3:BaroBackend::~BaroBackend()	16	static
+baro.h:64:8:bool BaroBackend::getUpdate()	16	static
+baro.h:65:8:void BaroBackend::setUpdate(bool)	16	static
+baro.h:67:16:float BaroBackend::getPressure()	16	static
+baro.h:68:16:float BaroBackend::getTemperature()	16	static
+baro.h:69:16:float BaroBackend::getAltitude()	16	static
+gps_backend.h:87:11:GPS_Backend::~GPS_Backend()	16	static
+gps_backend.h:87:11:virtual GPS_Backend::~GPS_Backend()	16	static
+gps_backend.h:102:8:bool GPS_Backend::getMagValid() const	16	static
+gps_backend.h:103:9:float GPS_Backend::getMagDeclination() const	16	static
+mag_encoder.h:24:3:MagEncoder::~MagEncoder()	16	static
+Float32.h:18:5:std_msgs::Float32::Float32()	16	static
+Float32.h:23:17:virtual int std_msgs::Float32::serialize(unsigned char*) const	24	static
+Float32.h:39:17:virtual int std_msgs::Float32::deserialize(unsigned char*)	24	static
+Float32.h:56:26:virtual const char* std_msgs::Float32::getType()	16	static
+Float32.h:57:26:virtual const char* std_msgs::Float32::getMD5()	16	static
+battery_status.h:31:3:BatteryStatus::BatteryStatus()	32	static
+battery_status.h:36:3:BatteryStatus::~BatteryStatus()	16	static
+battery_status.h:39:8:void BatteryStatus::init(ADC_HandleTypeDef*, ros::NodeHandle*, bool)	24	static
+battery_status.h:55:8:void BatteryStatus::adcScaleCallback(const std_msgs::Float32&)	16	static
+battery_status.h:64:8:void BatteryStatus::update(float)	16	static
+dynamixel_serial.h:284:2:ServoData::ServoData()	16	static
+array:94:12:std::array<ServoData, 10>::array()	24	static
+dynamixel_serial.h:327:3:DynamixelSerial::DynamixelSerial()	40	static
+ServoState.h:26:5:spinal::ServoState::ServoState()	16	static
+ServoState.h:35:17:virtual int spinal::ServoState::serialize(unsigned char*) const	32	static
+ServoState.h:63:17:virtual int spinal::ServoState::deserialize(unsigned char*)	32	static
+ServoState.h:93:26:virtual const char* spinal::ServoState::getType()	16	static
+ServoState.h:94:26:virtual const char* spinal::ServoState::getMD5()	16	static
+ServoStates.h:24:5:spinal::ServoStates::ServoStates()	16	static
+ServoStates.h:30:17:virtual int spinal::ServoStates::serialize(unsigned char*) const	24	static
+ServoStates.h:54:17:virtual int spinal::ServoStates::deserialize(unsigned char*)	32	static
+ServoStates.h:82:26:virtual const char* spinal::ServoStates::getType()	16	static
+ServoStates.h:83:26:virtual const char* spinal::ServoStates::getMD5()	16	static
+ServoTorqueStates.h:20:5:spinal::ServoTorqueStates::ServoTorqueStates()	16	static
+ServoTorqueStates.h:25:17:virtual int spinal::ServoTorqueStates::serialize(unsigned char*) const	24	static
+ServoTorqueStates.h:40:17:virtual int spinal::ServoTorqueStates::deserialize(unsigned char*)	32	static
+ServoTorqueStates.h:59:26:virtual const char* spinal::ServoTorqueStates::getType()	16	static
+ServoTorqueStates.h:60:26:virtual const char* spinal::ServoTorqueStates::getMD5()	16	static
+ServoTorqueCmd.h:24:5:spinal::ServoTorqueCmd::ServoTorqueCmd()	16	static
+ServoTorqueCmd.h:30:17:virtual int spinal::ServoTorqueCmd::serialize(unsigned char*) const	32	static
+ServoTorqueCmd.h:54:17:virtual int spinal::ServoTorqueCmd::deserialize(unsigned char*)	40	static
+ServoTorqueCmd.h:86:26:virtual const char* spinal::ServoTorqueCmd::getType()	16	static
+ServoTorqueCmd.h:87:26:virtual const char* spinal::ServoTorqueCmd::getMD5()	16	static
+SetDirectServoConfig.h:31:5:spinal::SetDirectServoConfigRequest::SetDirectServoConfigRequest()	16	static
+SetDirectServoConfig.h:37:17:virtual int spinal::SetDirectServoConfigRequest::serialize(unsigned char*) const	32	static
+SetDirectServoConfig.h:62:17:virtual int spinal::SetDirectServoConfigRequest::deserialize(unsigned char*)	32	static
+SetDirectServoConfig.h:92:26:virtual const char* spinal::SetDirectServoConfigRequest::getType()	16	static
+SetDirectServoConfig.h:93:26:virtual const char* spinal::SetDirectServoConfigRequest::getMD5()	16	static
+SetDirectServoConfig.h:107:5:spinal::SetDirectServoConfigResponse::SetDirectServoConfigResponse()	16	static
+SetDirectServoConfig.h:113:17:virtual int spinal::SetDirectServoConfigResponse::serialize(unsigned char*) const	32	static
+SetDirectServoConfig.h:143:17:virtual int spinal::SetDirectServoConfigResponse::deserialize(unsigned char*)	40	static
+SetDirectServoConfig.h:179:26:virtual const char* spinal::SetDirectServoConfigResponse::getType()	16	static
+SetDirectServoConfig.h:180:26:virtual const char* spinal::SetDirectServoConfigResponse::getMD5()	16	static
+ServoInfo.h:36:5:spinal::ServoInfo::ServoInfo()	16	static
+ServoInfo.h:50:17:virtual int spinal::ServoInfo::serialize(unsigned char*) const	32	static
+ServoInfo.h:93:17:virtual int spinal::ServoInfo::deserialize(unsigned char*)	32	static
+ServoInfo.h:138:26:virtual const char* spinal::ServoInfo::getType()	16	static
+ServoInfo.h:139:26:virtual const char* spinal::ServoInfo::getMD5()	16	static
+BoardInfo.h:29:5:spinal::BoardInfo::BoardInfo()	16	static
+BoardInfo.h:38:17:virtual int spinal::BoardInfo::serialize(unsigned char*) const	24	static
+BoardInfo.h:61:17:virtual int spinal::BoardInfo::deserialize(unsigned char*)	32	static
+BoardInfo.h:88:26:virtual const char* spinal::BoardInfo::getType()	16	static
+BoardInfo.h:89:26:virtual const char* spinal::BoardInfo::getMD5()	16	static
+GetBoardInfo.h:18:5:spinal::GetBoardInfoRequest::GetBoardInfoRequest()	16	static
+GetBoardInfo.h:22:17:virtual int spinal::GetBoardInfoRequest::serialize(unsigned char*) const	24	static
+GetBoardInfo.h:28:17:virtual int spinal::GetBoardInfoRequest::deserialize(unsigned char*)	24	static
+GetBoardInfo.h:34:26:virtual const char* spinal::GetBoardInfoRequest::getType()	16	static
+GetBoardInfo.h:35:26:virtual const char* spinal::GetBoardInfoRequest::getMD5()	16	static
+GetBoardInfo.h:47:5:spinal::GetBoardInfoResponse::GetBoardInfoResponse()	16	static
+GetBoardInfo.h:52:17:virtual int spinal::GetBoardInfoResponse::serialize(unsigned char*) const	24	static
+GetBoardInfo.h:66:17:virtual int spinal::GetBoardInfoResponse::deserialize(unsigned char*)	32	static
+GetBoardInfo.h:84:26:virtual const char* spinal::GetBoardInfoResponse::getType()	16	static
+GetBoardInfo.h:85:26:virtual const char* spinal::GetBoardInfoResponse::getMD5()	16	static
+JointProfile.h:28:5:spinal::JointProfile::JointProfile()	16	static
+JointProfile.h:37:17:virtual int spinal::JointProfile::serialize(unsigned char*) const	32	static
+JointProfile.h:72:17:virtual int spinal::JointProfile::deserialize(unsigned char*)	32	static
+JointProfile.h:110:26:virtual const char* spinal::JointProfile::getType()	16	static
+JointProfile.h:111:26:virtual const char* spinal::JointProfile::getMD5()	16	static
+JointProfiles.h:21:5:spinal::JointProfiles::JointProfiles()	16	static
+JointProfiles.h:26:17:virtual int spinal::JointProfiles::serialize(unsigned char*) const	24	static
+JointProfiles.h:40:17:virtual int spinal::JointProfiles::deserialize(unsigned char*)	32	static
+JointProfiles.h:58:26:virtual const char* spinal::JointProfiles::getType()	16	static
+JointProfiles.h:59:26:virtual const char* spinal::JointProfiles::getMD5()	16	static
+dynamixel_serial.h:324:7:DynamixelSerial::~DynamixelSerial()	16	static
+servo.h:37:3:DirectServo::DirectServo()	64	static
+servo.h:47:3:DirectServo::~DirectServo()	16	static
+MagDeclination.h:23:5:spinal::MagDeclinationRequest::MagDeclinationRequest()	16	static
+MagDeclination.h:29:17:virtual int spinal::MagDeclinationRequest::serialize(unsigned char*) const	24	static
+MagDeclination.h:47:17:virtual int spinal::MagDeclinationRequest::deserialize(unsigned char*)	24	static
+MagDeclination.h:66:26:virtual const char* spinal::MagDeclinationRequest::getType()	16	static
+MagDeclination.h:67:26:virtual const char* spinal::MagDeclinationRequest::getMD5()	16	static
+MagDeclination.h:79:5:spinal::MagDeclinationResponse::MagDeclinationResponse()	16	static
+MagDeclination.h:85:17:virtual int spinal::MagDeclinationResponse::serialize(unsigned char*) const	32	static
+MagDeclination.h:108:17:virtual int spinal::MagDeclinationResponse::deserialize(unsigned char*)	32	static
+MagDeclination.h:133:26:virtual const char* spinal::MagDeclinationResponse::getType()	16	static
+MagDeclination.h:134:26:virtual const char* spinal::MagDeclinationResponse::getMD5()	16	static
+estimator.h:30:3:EstimatorAlgorithm::EstimatorAlgorithm()	16	static
+estimator.h:48:8:void EstimatorAlgorithm::update(const Vector3f&, const Vector3f&, const Vector3f&)	24	static
+estimator.h:58:16:virtual void EstimatorAlgorithm::estimation()	16	static
+estimator.h:67:16:ap::Vector3f EstimatorAlgorithm::getAngular()	48	static
+estimator.h:68:16:ap::Vector3f EstimatorAlgorithm::getAcc()	48	static
+estimator.h:69:16:ap::Vector3f EstimatorAlgorithm::getMag()	48	static
+estimator.h:77:8:bool EstimatorAlgorithm::getMagDecValid()	16	static
+estimator.h:78:9:float EstimatorAlgorithm::getMagDeclination()	16	static
+estimator.h:79:8:void EstimatorAlgorithm::setMagDeclination(float)	16	static
+complementary_ahrs.h:29:3:ComplementaryAHRS::ComplementaryAHRS()	16	static
+complementary_ahrs.h:32:18:virtual ap::Quaternion ComplementaryAHRS::getQuaternion()	72	static
+complementary_ahrs.h:44:8:virtual void ComplementaryAHRS::estimation()	256	static
+attitude_estimate.h:55:3:AttitudeEstimate::~AttitudeEstimate()	16	static
+attitude_estimate.h:92:3:AttitudeEstimate::AttitudeEstimate()	32	static
+attitude_estimate.h:97:8:void AttitudeEstimate::init(IMU*, GPS*, ros::NodeHandle*)	32	static
+attitude_estimate.h:119:8:void AttitudeEstimate::update()	64	static
+attitude_estimate.h:145:8:void AttitudeEstimate::publish()	96	static
+attitude_estimate.h:217:8:void AttitudeEstimate::magDeclinationCallback(const Request&, spinal::MagDeclination::Response&)	24	static
+Barometer.h:25:5:spinal::Barometer::Barometer()	16	static
+Barometer.h:33:17:virtual int spinal::Barometer::serialize(unsigned char*) const	32	static
+Barometer.h:79:17:virtual int spinal::Barometer::deserialize(unsigned char*)	32	static
+Barometer.h:128:26:virtual const char* spinal::Barometer::getType()	16	static
+Barometer.h:129:26:virtual const char* spinal::Barometer::getMD5()	16	static
+altitude_estimate.h:32:3:AltitudeEstimate::AltitudeEstimate()	16	static
+altitude_estimate.h:34:3:AltitudeEstimate::~AltitudeEstimate()	16	static
+altitude_estimate.h:40:9:void AltitudeEstimate::init(IMU*, Baro*, ros::NodeHandle*)	24	static
+altitude_estimate.h:51:8:void AltitudeEstimate::update()	16	static
+altitude_estimate.h:96:8:void AltitudeEstimate::publish()	32	static
+pos_estimate.h:30:3:PosEstimate::PosEstimate()	16	static
+pos_estimate.h:31:3:PosEstimate::~PosEstimate()	16	static
+pos_estimate.h:33:9:void PosEstimate::init(IMU*, GPS*, ros::NodeHandle*)	24	static
+pos_estimate.h:40:8:void PosEstimate::update()	16	static
+state_estimate.h:37:3:StateEstimate::StateEstimate()	16	static
+state_estimate.h:40:3:StateEstimate::~StateEstimate()	16	static
+state_estimate.h:49:9:void StateEstimate::init(IMU*, Baro*, GPS*, ros::NodeHandle*)	24	static
+state_estimate.h:88:8:void StateEstimate::update()	16	static
+UavInfo.h:26:5:spinal::UavInfo::UavInfo()	16	static
+UavInfo.h:33:17:virtual int spinal::UavInfo::serialize(unsigned char*) const	24	static
+UavInfo.h:45:17:virtual int spinal::UavInfo::deserialize(unsigned char*)	24	static
+UavInfo.h:57:26:virtual const char* spinal::UavInfo::getType()	16	static
+UavInfo.h:58:26:virtual const char* spinal::UavInfo::getMD5()	16	static
+attitude_control.h:79:3:AttitudeController::~AttitudeController()	16	static
+attitude_control.h:99:8:void AttitudeController::setIntegrateFlag(bool)	16	static
+attitude_control.h:100:8:bool AttitudeController::getForceLandingFlag()	16	static
+attitude_control.h:102:8:void AttitudeController::setForceLandingFlag(bool)	16	static
+FlightConfigCmd.h:23:5:spinal::FlightConfigCmd::FlightConfigCmd()	16	static
+FlightConfigCmd.h:28:17:virtual int spinal::FlightConfigCmd::serialize(unsigned char*) const	24	static
+FlightConfigCmd.h:36:17:virtual int spinal::FlightConfigCmd::deserialize(unsigned char*)	24	static
+FlightConfigCmd.h:44:26:virtual const char* spinal::FlightConfigCmd::getType()	16	static
+FlightConfigCmd.h:45:26:virtual const char* spinal::FlightConfigCmd::getMD5()	16	static
+flight_control.h:40:3:FlightControl::~FlightControl()	16	static
+flight_control.h:62:3:FlightControl::FlightControl()	40	static
+flight_control.h:70:8:void FlightControl::init(TIM_HandleTypeDef*, TIM_HandleTypeDef*, StateEstimate*, DShot*, BatteryStatus*, ros::NodeHandle*, QueueDefinition**)	40	static
+flight_control.h:97:8:void FlightControl::init(TIM_HandleTypeDef*, TIM_HandleTypeDef*, StateEstimate*, BatteryStatus*, ros::NodeHandle*, QueueDefinition**)	40	static
+flight_control.h:103:8:void FlightControl::update()	16	static
+flight_control.h:120:8:void FlightControl::setMotorNumber(uint8_t)	16	static
+flight_control.h:125:8:void FlightControl::setUavModel(int8_t)	16	static
+flight_control.h:162:8:void FlightControl::flightConfigCallback(const spinal::FlightConfigCmd&)	16	static
+flight_control.h:228:6:void FlightControl::uavInfoConfigCallback(const spinal::UavInfo&)	16	static
+main.cpp:161:5:int main()	352	static
+main.cpp:368:6:void SystemClock_Config()	312	static
+main.cpp:450:13:void MX_ADC1_Init()	48	static
+main.cpp:515:13:void MX_FDCAN1_Init()	8	static
+main.cpp:568:13:void MX_I2C1_Init()	8	static
+main.cpp:614:13:void MX_I2C3_Init()	8	static
+main.cpp:660:13:void MX_SPI1_Init()	8	static
+main.cpp:708:13:void MX_TIM1_Init()	112	static
+main.cpp:801:13:void MX_TIM4_Init()	64	static
+main.cpp:872:13:void MX_USART1_UART_Init()	8	static
+main.cpp:920:13:void MX_USART3_UART_Init()	8	static
+main.cpp:966:13:void MX_DMA_Init()	16	static
+main.cpp:990:13:void MX_GPIO_Init()	56	static
+main.cpp:1049:6:void coreTaskFunc(const void*)	32	static
+main.cpp:1124:6:void rosSpinTaskFunc(const void*)	16	static
+main.cpp:1146:6:void idleTaskFunc(const void*)	16	static
+main.cpp:1164:6:void rosPublishTask(const void*)	16	static
+main.cpp:1187:6:void voltageTask(const void*)	16	static
+main.cpp:1206:13:void canRxTask(const void*)	16	static
+main.cpp:1225:13:void servoTaskCallback(const void*)	16	static
+main.cpp:1240:6:void coreTaskEvokeCb(const void*)	16	static
+main.cpp:1251:6:void MPU_Config()	24	static
+main.cpp:1359:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	16	static
+main.cpp:1376:6:void Error_Handler()	4	static,ignoring_inline_asm
+msg.h:188:15:static void ros::Msg::varToArr(A, V) [with A = unsigned char*; V = long unsigned int]	24	static
+msg.h:196:15:static void ros::Msg::arrToVar(V&, A) [with V = long unsigned int; A = unsigned char*]	24	static
+subscriber.h:44:7:ros::Subscriber_::Subscriber_()	16	static
+vector3.h:75:5:ap::Vector3<T>::Vector3() [with T = float]	16	static
+subscriber.h:66:3:ros::Subscriber<MsgT, ObjT>::Subscriber(const char*, ros::Subscriber<MsgT, ObjT>::CallbackT, ObjT*, int) [with MsgT = std_msgs::Float32; ObjT = BatteryStatus]	24	static
+node_handle.h:397:8:bool ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::advertise(ros::Publisher&) [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	24	static
+node_handle.h:413:8:bool ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::subscribe(ros::Subscriber_&) [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	24	static
+node_handle.h:530:8:void ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::loginfo(const char*) [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	16	static
+stl_pair.h:524:5:constexpr std::pair<typename std::__decay_and_strip<_Tp>::__type, typename std::__decay_and_strip<_T2>::__type> std::make_pair(_T1&&, _T2&&) [with _T1 = int; _T2 = int]	32	static
+move.h:74:5:constexpr _Tp&& std::forward(typename std::remove_reference<_Tp>::type&) [with _Tp = int]	16	static
+stl_pair.h:360:12:constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = int; _U2 = int; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = true; _T1 = unsigned char; _T2 = unsigned char]	16	static
+dynamixel_serial.h:229:3:RingBufferDx<T, SIZE>::RingBufferDx() [with T = std::pair<unsigned char, unsigned char>; int SIZE = 64]	16	static
+dynamixel_serial.h:235:3:RingBufferDx<T, SIZE>::~RingBufferDx() [with T = std::pair<unsigned char, unsigned char>; int SIZE = 64]	16	static
+subscriber.h:66:3:ros::Subscriber<MsgT, ObjT>::Subscriber(const char*, ros::Subscriber<MsgT, ObjT>::CallbackT, ObjT*, int) [with MsgT = spinal::ServoControlCmd; ObjT = DirectServo]	24	static
+subscriber.h:66:3:ros::Subscriber<MsgT, ObjT>::Subscriber(const char*, ros::Subscriber<MsgT, ObjT>::CallbackT, ObjT*, int) [with MsgT = spinal::ServoTorqueCmd; ObjT = DirectServo]	24	static
+subscriber.h:66:3:ros::Subscriber<MsgT, ObjT>::Subscriber(const char*, ros::Subscriber<MsgT, ObjT>::CallbackT, ObjT*, int) [with MsgT = spinal::JointProfiles; ObjT = DirectServo]	24	static
+service_server.h:52:3:ros::ServiceServer<MReq, MRes, ObjT>::ServiceServer(const char*, ros::ServiceServer<MReq, MRes, ObjT>::CallbackT, ObjT*) [with MReq = spinal::SetDirectServoConfigRequest; MRes = spinal::SetDirectServoConfigResponse; ObjT = DirectServo]	24	static
+service_server.h:52:3:ros::ServiceServer<MReq, MRes, ObjT>::ServiceServer(const char*, ros::ServiceServer<MReq, MRes, ObjT>::CallbackT, ObjT*) [with MReq = spinal::GetBoardInfoRequest; MRes = spinal::GetBoardInfoResponse; ObjT = DirectServo]	24	static
+matrix3.h:57:5:ap::Matrix3<T>::Matrix3() [with T = float]	16	static
+matrix3.h:194:17:void ap::Matrix3<T>::identity() [with T = float]	16	static
+vector3.h:187:16:ap::Vector3<T> ap::Vector3<T>::normalized() const [with T = float]	48	static
+vector3.h:175:10:void ap::Vector3<T>::normalize() [with T = float]	16	static
+matrix3.h:61:5:ap::Matrix3<T>::Matrix3(const ap::Vector3<T>&, const ap::Vector3<T>&, const ap::Vector3<T>&) [with T = float]	24	static
+matrix3.h:202:17:bool ap::Matrix3<T>::is_nan() [with T = float]	16	static
+service_server.h:52:3:ros::ServiceServer<MReq, MRes, ObjT>::ServiceServer(const char*, ros::ServiceServer<MReq, MRes, ObjT>::CallbackT, ObjT*) [with MReq = spinal::MagDeclinationRequest; MRes = spinal::MagDeclinationResponse; ObjT = AttitudeEstimate]	24	static
+node_handle.h:429:8:bool ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::advertiseService(ros::ServiceServer<MReq, MRes, ObjT>&) [with MReq = spinal::MagDeclinationRequest; MRes = spinal::MagDeclinationResponse; ObjT = AttitudeEstimate; Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	24	static
+node_handle.h:345:16:bool ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::connected() [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	16	static
+node_handle.h:374:8:ros::Time ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::now() [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	24	static
+vector3.h:123:9:T& ap::Vector3<T>::operator[](uint8_t) [with T = float]	24	static
+stl_vector.h:675:7:std::vector<_Tp, _Alloc>::~vector() [with _Tp = spinal::MotorInfo; _Alloc = std::allocator<spinal::MotorInfo>]	24	static
+subscriber.h:66:3:ros::Subscriber<MsgT, ObjT>::Subscriber(const char*, ros::Subscriber<MsgT, ObjT>::CallbackT, ObjT*, int) [with MsgT = spinal::UavInfo; ObjT = FlightControl]	24	static
+subscriber.h:66:3:ros::Subscriber<MsgT, ObjT>::Subscriber(const char*, ros::Subscriber<MsgT, ObjT>::CallbackT, ObjT*, int) [with MsgT = spinal::FlightConfigCmd; ObjT = FlightControl]	24	static
+node_handle.h:50:7:constexpr ros::NodeHandleBase_::NodeHandleBase_()	16	static
+node_handle.h:106:7:constexpr ros::NodeHandle_<STM32Hardware, 50, 50, 512, 1024>::NodeHandle_()	16	static
+node_handle.h:106:7:ros::NodeHandle_<STM32Hardware, 50, 50, 512, 1024>::~NodeHandle_()	16	static
+node_handle_stm.h:56:5:ros::NodeHandleStm_<MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::NodeHandleStm_() [with int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	16	static
+node_handle_stm.h:62:10:void ros::NodeHandleStm_<MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::initNode(UART_HandleTypeDef*, QueueDefinition**, QueueDefinition**) [with int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	24	static
+node_handle_stm.h:87:9:int ros::NodeHandleStm_<MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::spinOnce() [with int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	24	static
+node_handle_stm.h:82:17:int ros::NodeHandleStm_<MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::publish() [with int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	16	static
+node_handle.h:517:8:void ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::log(char, const char*) [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	40	static
+stl_pair.h:341:12:constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = int; _U2 = int; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = true; _T1 = int; _T2 = int]	24	static
+stl_vector.h:125:14:std::_Vector_base<spinal::MotorInfo, std::allocator<spinal::MotorInfo> >::_Vector_impl::~_Vector_impl()	16	static
+stl_vector.h:330:7:std::_Vector_base<_Tp, _Alloc>::~_Vector_base() [with _Tp = spinal::MotorInfo; _Alloc = std::allocator<spinal::MotorInfo>]	16	static
+stl_vector.h:273:7:std::_Vector_base<_Tp, _Alloc>::_Tp_alloc_type& std::_Vector_base<_Tp, _Alloc>::_M_get_Tp_allocator() [with _Tp = spinal::MotorInfo; _Alloc = std::allocator<spinal::MotorInfo>]	16	static
+stl_construct.h:203:5:void std::_Destroy(_ForwardIterator, _ForwardIterator, std::allocator<_T2>&) [with _ForwardIterator = spinal::MotorInfo*; _Tp = spinal::MotorInfo]	24	static
+node_handle.h:136:8:void ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::initNode() [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	16	static
+node_handle.h:189:15:int ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::spinOnce() [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	32	static
+node_handle.h:476:15:int ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::publish(int, const ros::Msg*) [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	40	static
+allocator.h:153:7:std::allocator< <template-parameter-1-1> >::~allocator() [with _Tp = spinal::MotorInfo]	16	static
+stl_vector.h:347:7:void std::_Vector_base<_Tp, _Alloc>::_M_deallocate(std::_Vector_base<_Tp, _Alloc>::pointer, std::size_t) [with _Tp = spinal::MotorInfo; _Alloc = std::allocator<spinal::MotorInfo>]	24	static
+stl_construct.h:127:5:void std::_Destroy(_ForwardIterator, _ForwardIterator) [with _ForwardIterator = spinal::MotorInfo*]	16	static
+node_handle.h:354:8:void ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::requestSyncTime() [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	32	static
+node_handle.h:445:8:void ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::negotiateTopics() [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	56	static
+node_handle.h:361:8:void ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::syncTime(uint8_t*) [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	32	static
+node_handle.h:538:8:void ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::logerror(const char*) [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	16	static
+new_allocator.h:89:7:__gnu_cxx::new_allocator<_Tp>::~new_allocator() [with _Tp = spinal::MotorInfo]	16	static
+alloc_traits.h:469:7:static void std::allocator_traits<std::allocator<_CharT> >::deallocate(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, std::allocator_traits<std::allocator<_CharT> >::pointer, std::allocator_traits<std::allocator<_CharT> >::size_type) [with _Tp = spinal::MotorInfo]	24	static
+stl_construct.h:117:9:static void std::_Destroy_aux<true>::__destroy(_ForwardIterator, _ForwardIterator) [with _ForwardIterator = spinal::MotorInfo*]	16	static
+node_handle.h:384:8:void ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::setNow(const ros::Time&) [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 50; int MAX_PUBLISHERS = 50; int INPUT_SIZE = 512; int OUTPUT_SIZE = 1024]	24	static
+new_allocator.h:119:7:void __gnu_cxx::new_allocator<_Tp>::deallocate(__gnu_cxx::new_allocator<_Tp>::pointer, __gnu_cxx::new_allocator<_Tp>::size_type) [with _Tp = spinal::MotorInfo]	24	static
+gps_ublox.h:68:7:GPS::~GPS()	16	static
+gps_ublox.h:68:7:virtual GPS::~GPS()	16	static
+baro_ms5611.h:21:7:Baro::~Baro()	16	static
+node_handle_stm.h:50:9:ros::NodeHandleStm_<50, 50, 512, 1024>::~NodeHandleStm_()	16	static
+main.cpp:1385:1:void __static_initialization_and_destruction_0(int, int)	16	static
+subscriber.h:74:16:void ros::Subscriber<MsgT, ObjT>::callback(unsigned char*) [with MsgT = spinal::FlightConfigCmd; ObjT = FlightControl]	16	static
+subscriber.h:88:15:int ros::Subscriber<MsgT, ObjT>::getEndpointType() [with MsgT = spinal::FlightConfigCmd; ObjT = FlightControl]	16	static
+subscriber.h:80:24:const char* ros::Subscriber<MsgT, ObjT>::getMsgType() [with MsgT = spinal::FlightConfigCmd; ObjT = FlightControl]	16	static
+subscriber.h:84:24:const char* ros::Subscriber<MsgT, ObjT>::getMsgMD5() [with MsgT = spinal::FlightConfigCmd; ObjT = FlightControl]	16	static
+subscriber.h:74:16:void ros::Subscriber<MsgT, ObjT>::callback(unsigned char*) [with MsgT = spinal::UavInfo; ObjT = FlightControl]	16	static
+subscriber.h:88:15:int ros::Subscriber<MsgT, ObjT>::getEndpointType() [with MsgT = spinal::UavInfo; ObjT = FlightControl]	16	static
+subscriber.h:80:24:const char* ros::Subscriber<MsgT, ObjT>::getMsgType() [with MsgT = spinal::UavInfo; ObjT = FlightControl]	16	static
+subscriber.h:84:24:const char* ros::Subscriber<MsgT, ObjT>::getMsgMD5() [with MsgT = spinal::UavInfo; ObjT = FlightControl]	16	static
+service_server.h:61:16:void ros::ServiceServer<MReq, MRes, ObjT>::callback(unsigned char*) [with MReq = spinal::MagDeclinationRequest; MRes = spinal::MagDeclinationResponse; ObjT = AttitudeEstimate]	16	static
+service_server.h:75:15:int ros::ServiceServer<MReq, MRes, ObjT>::getEndpointType() [with MReq = spinal::MagDeclinationRequest; MRes = spinal::MagDeclinationResponse; ObjT = AttitudeEstimate]	16	static
+service_server.h:67:24:const char* ros::ServiceServer<MReq, MRes, ObjT>::getMsgType() [with MReq = spinal::MagDeclinationRequest; MRes = spinal::MagDeclinationResponse; ObjT = AttitudeEstimate]	16	static
+service_server.h:71:24:const char* ros::ServiceServer<MReq, MRes, ObjT>::getMsgMD5() [with MReq = spinal::MagDeclinationRequest; MRes = spinal::MagDeclinationResponse; ObjT = AttitudeEstimate]	16	static
+service_server.h:61:16:void ros::ServiceServer<MReq, MRes, ObjT>::callback(unsigned char*) [with MReq = spinal::GetBoardInfoRequest; MRes = spinal::GetBoardInfoResponse; ObjT = DirectServo]	16	static
+service_server.h:75:15:int ros::ServiceServer<MReq, MRes, ObjT>::getEndpointType() [with MReq = spinal::GetBoardInfoRequest; MRes = spinal::GetBoardInfoResponse; ObjT = DirectServo]	16	static
+service_server.h:67:24:const char* ros::ServiceServer<MReq, MRes, ObjT>::getMsgType() [with MReq = spinal::GetBoardInfoRequest; MRes = spinal::GetBoardInfoResponse; ObjT = DirectServo]	16	static
+service_server.h:71:24:const char* ros::ServiceServer<MReq, MRes, ObjT>::getMsgMD5() [with MReq = spinal::GetBoardInfoRequest; MRes = spinal::GetBoardInfoResponse; ObjT = DirectServo]	16	static
+service_server.h:61:16:void ros::ServiceServer<MReq, MRes, ObjT>::callback(unsigned char*) [with MReq = spinal::SetDirectServoConfigRequest; MRes = spinal::SetDirectServoConfigResponse; ObjT = DirectServo]	16	static
+service_server.h:75:15:int ros::ServiceServer<MReq, MRes, ObjT>::getEndpointType() [with MReq = spinal::SetDirectServoConfigRequest; MRes = spinal::SetDirectServoConfigResponse; ObjT = DirectServo]	16	static
+service_server.h:67:24:const char* ros::ServiceServer<MReq, MRes, ObjT>::getMsgType() [with MReq = spinal::SetDirectServoConfigRequest; MRes = spinal::SetDirectServoConfigResponse; ObjT = DirectServo]	16	static
+service_server.h:71:24:const char* ros::ServiceServer<MReq, MRes, ObjT>::getMsgMD5() [with MReq = spinal::SetDirectServoConfigRequest; MRes = spinal::SetDirectServoConfigResponse; ObjT = DirectServo]	16	static
+subscriber.h:74:16:void ros::Subscriber<MsgT, ObjT>::callback(unsigned char*) [with MsgT = spinal::JointProfiles; ObjT = DirectServo]	16	static
+subscriber.h:88:15:int ros::Subscriber<MsgT, ObjT>::getEndpointType() [with MsgT = spinal::JointProfiles; ObjT = DirectServo]	16	static
+subscriber.h:80:24:const char* ros::Subscriber<MsgT, ObjT>::getMsgType() [with MsgT = spinal::JointProfiles; ObjT = DirectServo]	16	static
+subscriber.h:84:24:const char* ros::Subscriber<MsgT, ObjT>::getMsgMD5() [with MsgT = spinal::JointProfiles; ObjT = DirectServo]	16	static
+subscriber.h:74:16:void ros::Subscriber<MsgT, ObjT>::callback(unsigned char*) [with MsgT = spinal::ServoTorqueCmd; ObjT = DirectServo]	16	static
+subscriber.h:88:15:int ros::Subscriber<MsgT, ObjT>::getEndpointType() [with MsgT = spinal::ServoTorqueCmd; ObjT = DirectServo]	16	static
+subscriber.h:80:24:const char* ros::Subscriber<MsgT, ObjT>::getMsgType() [with MsgT = spinal::ServoTorqueCmd; ObjT = DirectServo]	16	static
+subscriber.h:84:24:const char* ros::Subscriber<MsgT, ObjT>::getMsgMD5() [with MsgT = spinal::ServoTorqueCmd; ObjT = DirectServo]	16	static
+subscriber.h:74:16:void ros::Subscriber<MsgT, ObjT>::callback(unsigned char*) [with MsgT = spinal::ServoControlCmd; ObjT = DirectServo]	16	static
+subscriber.h:88:15:int ros::Subscriber<MsgT, ObjT>::getEndpointType() [with MsgT = spinal::ServoControlCmd; ObjT = DirectServo]	16	static
+subscriber.h:80:24:const char* ros::Subscriber<MsgT, ObjT>::getMsgType() [with MsgT = spinal::ServoControlCmd; ObjT = DirectServo]	16	static
+subscriber.h:84:24:const char* ros::Subscriber<MsgT, ObjT>::getMsgMD5() [with MsgT = spinal::ServoControlCmd; ObjT = DirectServo]	16	static
+subscriber.h:74:16:void ros::Subscriber<MsgT, ObjT>::callback(unsigned char*) [with MsgT = std_msgs::Float32; ObjT = BatteryStatus]	16	static
+subscriber.h:88:15:int ros::Subscriber<MsgT, ObjT>::getEndpointType() [with MsgT = std_msgs::Float32; ObjT = BatteryStatus]	16	static
+subscriber.h:80:24:const char* ros::Subscriber<MsgT, ObjT>::getMsgType() [with MsgT = std_msgs::Float32; ObjT = BatteryStatus]	16	static
+subscriber.h:84:24:const char* ros::Subscriber<MsgT, ObjT>::getMsgMD5() [with MsgT = std_msgs::Float32; ObjT = BatteryStatus]	16	static
+main.cpp:1385:1:cpp)	8	static
+main.cpp:1385:1:cpp)	8	static

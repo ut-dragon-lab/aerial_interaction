@@ -1,0 +1,43 @@
+icm_20948.cpp:15:6:void ICM20948::init(SPI_HandleTypeDef*, I2C_HandleTypeDef*, ros::NodeHandle*, GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t)	24	static
+icm_20948.cpp:42:6:virtual void ICM20948::gyroInit()	16	static
+icm_20948.cpp:64:6:virtual void ICM20948::accInit()	16	static
+icm_20948.cpp:73:6:virtual void ICM20948::magInit()	16	static
+icm_20948.cpp:102:6:virtual void ICM20948::updateRawData()	16	static
+icm_20948.cpp:110:6:void ICM20948::gyroRead(ap::Vector3f*)	24	static
+icm_20948.cpp:121:6:void ICM20948::accelRead(ap::Vector3f*)	16	static
+icm_20948.cpp:130:6:bool ICM20948::magRead(ap::Vector3f*)	24	static
+icm_20948.cpp:159:6:void ICM20948::tempRead(float*)	24	static
+icm_20948.cpp:168:6:void ICM20948::gyroReadRad(ap::Vector3f*)	16	static
+icm_20948.cpp:177:6:void ICM20948::accelReadG(ap::Vector3f*)	24	static
+icm_20948.cpp:187:6:bool ICM20948::magReadUT(ap::Vector3f*)	32	static
+icm_20948.cpp:200:6:void ICM20948::tempReadC(float*)	16	static
+icm_20948.cpp:207:6:bool ICM20948::getIcm20948WhoAmI()	16	static
+icm_20948.cpp:217:6:bool ICM20948::getAk09916WhoAmI()	16	static
+icm_20948.cpp:226:6:void ICM20948::deviceReset()	16	static
+icm_20948.cpp:232:6:void ICM20948::magSoftReset()	16	static
+icm_20948.cpp:238:6:void ICM20948::wakeUp()	24	static
+icm_20948.cpp:247:6:void ICM20948::sleep()	24	static
+icm_20948.cpp:256:6:void ICM20948::spiModeEnable()	24	static
+icm_20948.cpp:267:6:void ICM20948::intPinBpEnable()	24	static
+icm_20948.cpp:274:6:void ICM20948::i2cMasterReset()	24	static
+icm_20948.cpp:285:6:void ICM20948::i2cMasterEnable()	24	static
+icm_20948.cpp:296:6:void ICM20948::i2cMasterClkFrq(uint8_t)	24	static
+icm_20948.cpp:307:6:void ICM20948::i2cOdrCfg(uint8_t)	24	static
+icm_20948.cpp:315:6:void ICM20948::setClockSource(uint8_t)	24	static
+icm_20948.cpp:324:6:void ICM20948::odrAlignEnable()	16	static
+icm_20948.cpp:330:6:void ICM20948::setGyroLpf(uint8_t)	24	static
+icm_20948.cpp:338:6:void ICM20948::setAccelLpf(uint8_t)	24	static
+icm_20948.cpp:346:6:void ICM20948::setGyroSampleRate(uint8_t)	16	static
+icm_20948.cpp:352:6:void ICM20948::setAccelSampleRate(uint16_t)	24	static
+icm_20948.cpp:362:6:void ICM20948::setMagOperationMode(operation_mode)	16	static
+icm_20948.cpp:369:6:void ICM20948::setGyroFullScale(gyro_full_scale)	24	static
+icm_20948.cpp:398:6:void ICM20948::setAccelFullScale(accel_full_scale)	24	static
+icm_20948.cpp:429:6:void ICM20948::selectUserBank(userbank)	24	static
+icm_20948.cpp:440:6:void ICM20948::readSingleIcm20948(userbank, uint8_t)	24	static
+icm_20948.cpp:451:6:void ICM20948::writeSingleIcm20948(userbank, uint8_t, uint8_t)	24	static
+icm_20948.cpp:462:6:void ICM20948::readMultipleIcm20948(userbank, uint8_t)	24	static
+icm_20948.cpp:475:6:void ICM20948::writeMultipleIcm20948(userbank, uint8_t, uint8_t*, uint8_t)	32	static
+icm_20948.cpp:486:6:void ICM20948::readSingleAk09916(uint8_t)	16	static
+icm_20948.cpp:494:6:void ICM20948::writeSingleAk09916(uint8_t, uint8_t)	16	static
+icm_20948.cpp:503:6:void ICM20948::readMultipleAk09916(uint8_t)	24	static
+vector3.h:75:5:ap::Vector3<T>::Vector3() [with T = float]	16	static
